@@ -1,4 +1,8 @@
 body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  min-width: 100%;
   background-image: url("BGRD2.png");
   background-repeat: repeat;
 }
@@ -6,9 +10,8 @@ body {
 h1 {
   color: white;
   text-align: center;
-  background-image: linear-gradient(to bottom right ,rgba(147, 242, 255, 0.507), rgba(0, 225, 255, 0.5), rgba(0, 224, 253, 0.5), rgba(45, 182, 201, 0.5));
   margin: auto;
-  padding: auto;
+  padding: 20px;
 }
   
 p {
@@ -21,13 +24,20 @@ table, th, td {
 }
 
 footer {
-  margin: auto;
+  position: fixed;
+  bottom: 0;
+  max-width: 100%;
+  min-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding: auto;
 }
 
 header {
+  background-color: white;
   background-image: linear-gradient(to bottom right ,rgba(147, 242, 255, 0.507), rgba(0, 225, 255, 0.5), rgba(0, 224, 253, 0.5), rgba(45, 182, 201, 0.5));
-  margin:  auto;
+  margin-left: auto;
+  margin-right: auto;
   padding:  auto;
 }
 /*
