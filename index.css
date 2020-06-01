@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  color: white;
+  color: rgb(37, 37, 37);
   text-align: center;
   margin: auto;
   padding: 20px;
@@ -30,7 +30,7 @@ table, th, td {
 }
 
 footer {
-  background-color: black;
+  background-color: gray;
   color: white;
   position: fixed;
   bottom: 0;
