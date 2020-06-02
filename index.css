@@ -10,12 +10,11 @@ body {
   padding: 0;
   max-width: 100%;
   min-width: 100%;
-  background-image: url("BGRD1.png");
-  background-repeat: repeat;
+  background-color: whitesmoke;
 }
 
 h1 {
-  color: rgb(37, 37, 37);
+  color: whitesmoke;
   text-align: center;
   margin: auto;
   padding: 20px;
@@ -27,11 +26,11 @@ p {
 }
 
 table, th, td {
-  border: 1px solid rgb(255, 196, 0);
+  border: 1px solid whitesmoke;
 }
 
 footer {
-  background-color: rgb(255, 196, 0);
+  background-color: whitesmoke;
   color: black;
   position: fixed;
   bottom: 0;
@@ -44,7 +43,8 @@ footer {
 }
 
 header {
-  background-color: rgb(255, 196, 0);
+  background-image: url("BGRD1.png");
+  background-repeat: repeat;
   margin-left: auto;
   margin-right: auto;
   padding:  auto;
