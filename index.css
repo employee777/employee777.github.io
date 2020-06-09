@@ -10,7 +10,7 @@
   border-right:2px solid rgba(49, 49, 49, .3);
   border-bottom:2px solid rgba(49, 49, 49, .3);
   border-left:1px solid white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
   font-family:  Helvetica;
 }
 
@@ -64,7 +64,7 @@ header a{
   padding-left:50px;
   font-family:  Helvetica;
   background-color: turquoise;
-  box-shadow: 5px 5px 7px black, 0 1px black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .navRibbon{
