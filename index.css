@@ -75,12 +75,15 @@ header a{
 
 .nav button{
   font-family: Arial;
+  font-size: 17px;
   margin-right: 30px;
   float: right;
   padding-left: 15px;
-  padding-top: 10px;
+  padding-top: 14px;
   padding-right: 15px;
   padding-bottom: 10px;
+  background-color: turquoise;
+  border: none;
 }
 
 /* Set a style for all buttons */
