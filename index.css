@@ -1,23 +1,33 @@
 .page {
+  height:100%;
   margin: 30px;
   padding: 30px;
-  background-color: rgba(0, 223, 253, 0.658);
-  height: 1000px;
+  background-image: url("BGRD3.png");
+  background-repeat: repeat;
+  border-top:1px solid white;
+  border-right:2px solid rgba(49, 49, 49, .3);
+  border-bottom:2px solid rgba(49, 49, 49, .3);
+  border-left:1px solid white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 body {
+  background-image: url("BGRD1.png");
+  background-repeat: repeat;
   margin: 0;
   padding: 0;
   max-width: 100%;
   min-width: 100%;
-  background-color: whitesmoke;
+  max-height: 100%;
 }
+
 
 h1 {
   color: whitesmoke;
   text-align: center;
   margin: auto;
   padding: 20px;
+  font-size: 50px ;
 }
   
 p {
@@ -25,27 +35,48 @@ p {
   font-size: 20px;
 }
 
-table, th, td {
-  border: 1px solid whitesmoke;
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
 
-footer {
+.flex-container>div {
   background-color: whitesmoke;
   color: black;
-  position: fixed;
-  bottom: 0;
-  max-width: 100%;
-  min-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: auto;
- 
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 15px;
 }
 
 header {
-  background-image: url("BGRD1.png");
-  background-repeat: repeat;
+  text-shadow: 5px 5px 7px black,-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   margin-left: auto;
   margin-right: auto;
   padding:  auto;
+}
+
+header a{
+  text-align: right; 
+  margin-right: 30px;
+}
+
+.nav{
+  margin-left: 30px;
+}
+
+.nav a{
+  border-top:1px solid white;
+  border-right:2px solid rgba(49, 49, 49,.3);
+  border-left:1px solid white;
+  margin-right: 5px;
+  float: left;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 0px;
+  background-image: url("BGRD3.png");
+  background-repeat: repeat;
 }
