@@ -132,10 +132,10 @@ a:hover, a:active {
 
 
 .flex-container {
+  margin: none;
   display: flex;
   align-items: stretch;
   justify-content: center;
-  align-content: flex-end;
 }
 
 .flex-container>div {
@@ -146,12 +146,15 @@ a:hover, a:active {
   line-height: 20px;
   font-size: 15px;
   font-family:  Helvetica;
-  align-content: flex-end;
 }
 
-
-
-
+.footer-wrapper{
+  margin:auto;
+  border-top: slategray;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 
 /* The Modal (background) */
