@@ -6,30 +6,98 @@
     <title>Marcus Helms</title>
 </head>
 
-<body>
-<div class= background>
-  </div>
-    <header>
-        <h1>Marcus Helms</h1>
-            <br><br>
-        
-    </header>  
+            <body>
+            <div class= background>
+              </div>
+                <header>
+                  <h1>Marcus Helms</h1>
+                  <br><br>
 
-    <div class= page>
-      
-     <main>
+                <!-- The Modal -->
+                <div id="id01" class="modal">
+                  <span onclick="document.getElementById('id01').style.display='none'" 
+                        class="close" 
+                        title="Close Modal"> &times;
+                  </span>
 
+                  <!-- Modal Content -->
+                  <form class="modal-content animate" 
+                        action="/action_page.php">
+
+                  <div class="imgcontainer">
+                    <img src="img_avatar2.png" 
+                        alt="Avatar" 
+                        class="avatar">
+                  </div>
+
+                  <div class="container">
+                    <label for="uname">
+                      <b>Username:</b>
+                    </label>
+                    <input type="text" 
+                          placeholder="Enter Username" 
+                          name="uname" required>
+                    <label for="psw">
+                      <b>Password:</b>
+                    </label>
+
+                    <input type="password" 
+                          placeholder="Enter Password"
+                          name="psw" required>
+                    <button type="submit"> Login </button>
+
+                  <label>
+                    <input type="checkbox" 
+                          checked="checked" 
+                          name="remember"> Remember me </label>
+                  </div>
+
+                  <div class="container"
+                      style="background-color:#f1f1f1">
+                  <button type="button" 
+                          onclick="document.getElementById('id01').style.display='none'" 
+                          class="cancelbtn"> Cancel </button>
+                  <span class="psw"> 
+                      Forgot 
+                    <a href="#"> 
+                      password? 
+                    </a> 
+                  </span>
+                  </div>
+                  </form>
+                  </div>
+                
+
+                <script>
+                  let modal = document.getElementById('id01');
+                      window.onclick = function(event) 
+                      {
+                          if (event.target == modal) 
+                          {
+                              modal.style.display = "none";
+                          }
+                      }
+                </script>
+      </header>
+
+      <div class= page>
       <div class= nav>
-        <script>
-          document.getElementById("02").style.display = "none";
-          </script><a href="index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="message.html">Message</a>
         <a href="projects.html">Projects</a>
-        <a href="login.html" style="float:right; margin-right: 30px;">Login</a>
+        <!-- Button to open the modal login form -->
+        <button type="submit" 
+                onclick="document.getElementById('id01').style.display='block'" 
+                style="max-width:200px;">
+                Login
+        </button>
       </div>
+      <main>
 
-      <div class="flex-container-message-wrapper">
+      <br>
+
+      <div class="message-wrapper">
          <div class=messagePage >
           <form action="https://formspree.io/mgenywgo" method="POST" style="border: none;">
             <label>
@@ -44,10 +112,13 @@
                   <div><textarea name="message"style="max-width: 700px; min-width:400px; min-height:200px;"></textarea></div>
            </label>
                <br>
-                  <div><button type="submit" style="max-width: 200px; min-width:100px ;" >Send</button></div>
+                  <div><button type="submit" style="max-width: 200px; min-width:80px ;" >Send</button></div>
+                <br>
           </form>
+          <br>
     </div>
     </div>
+    
       <div class= "footer-wrapper">
         <div class="flex-container">
           <h3>____________________________________________</h3>
