@@ -22,23 +22,42 @@
       <a href="about.html">About</a>
       <a href="message.html">Message</a>
       <a href="projects.html">Projects</a>
-      <a href="login.html" style="float:right; margin-right: 30px;">Login</a>
+      <a href="login.html" style="float:right; margin-right: 30px;">Login
+        
+    
+    
+    
+    </a>
     </div>
 
     <div class= page>
      <main>
-      
-        <h2>I'm hosted with GitHub Pages.</h2>
-        <p>Where should I start? Well I grew up in house with 5 older brother and 
-          no sisters I guess would be a good start. I ended up joining the military 
-          in order to pay for college and persue my career in software development. 
-          While I was in, I leanred many things about computers, electronics, and 
-          machines as a Fire-Controlman. After my contract was up I decided to go 
-          back home and continue to pursue my career. The things I like to do for 
-          fun are pretty simple. I play RPG games and table top game with my friends 
-          as well as watch anime. My hobbies include but are not limited to: 
-          illustrating, pixel art, car repair, electronic repairs (laptops and 
-          other pcbs), sleeping and eating.</p>
+        <form action="action_page.php" method="post">
+            <div class="imgcontainer">
+              <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+          
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+            <br>
+              <button type="submit">Login</button>
+              <button type="button" class="cancelbtn">Cancel</button>
+            <br>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+          
+            <div class="container" style="background-color:#f1f1f1">
+              
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        
 
         <div class="flex-container">
           <h3>____________________________________________</h3>
@@ -58,7 +77,7 @@
             <div><a href="https://www.linkedin.com/in/marcus-h-8b670a128/">Linkedin          </a></div>
             </div>
 
-      </main>
+     </main>
     
     </div>
   </body>
