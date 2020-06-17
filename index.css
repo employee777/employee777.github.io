@@ -15,8 +15,7 @@
 }
 
 body {
-  background-image: url("BGRD1.png");
-  background-repeat: repeat;
+  
   margin: 0;
   padding: 0;
   max-width: 100%;
@@ -40,6 +39,8 @@ p {
 }
 
 header {
+  background-image: url("BGRD1.png");
+  background-repeat: repeat;
   margin-left: auto;
   margin-right: auto;
   padding:  auto;

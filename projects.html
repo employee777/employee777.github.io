@@ -82,28 +82,32 @@
         <h2>I'm hosted with GitHub Pages.</h2>
         <p>
           Currently have some pixel art to show off for the game I've been trying to develop during my underways.
-        <br>
-          
         </p>
-        <canvas id="myCanvas" width="200" height="100"></canvas>
+          <br>
+
+          <!-- Mini Game engine maybe -->
+        <canvas id="canvas" width="200" height="100"></canvas>
+            <script>
+                    const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            ctx.fillStyle = 'black';
+            ctx.fillRect(10, 10, 150, 100);
+            </script>
 
         <div class= "footer-wrapper">
-          
-        
-
           <br>
 
           <div class="flex-container">
             <div><a href="https://twitter.com/MarcusHelms7">Twitter                          </a></div>
             <div><a href="employee777.github.io">Github                                      </a></div>
           </div>
-
-            <br>
+            
 
           <div class="flex-container">
             <div><a href="https://www.facebook.com/profile.php?id=100008358964248">Facebook  </a></div>
             <div><a href="https://www.linkedin.com/in/marcus-h-8b670a128/">Linkedin          </a></div>
-            </div>
+            <br><br><br><br><br>
           </div>
 
       </main>
