@@ -2,74 +2,73 @@
 <html>
 
 <head>
+	<meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
     <title>Marcus Helms</title>
 </head>
 
 <body>
-<div class= background>
+<div class= "background">
   </div>
     <header>
-        <h1>Marcus Helms</h1>
-            <br><br>
-
+		 <div class= "nav">
+	
+		
+          
           <!-- The Modal -->
           <div id="id01" class="modal">
             <span onclick="document.getElementById('id01').style.display='none'" 
                   class="close" 
                   title="Close Modal"> &times;
             </span>
-  
             <!-- Modal Content -->
-            <form class="modal-content animate" 
-                  action="/action_page.php">
+            <form class="modal-content animate" action="/action_page.php">
 
             <div class="imgcontainer">
               <img src="img_avatar2.png" 
                    alt="Avatar" 
                    class="avatar">
             </div>
-  
             <div class="container">
-
               <label for="uname">
                 <b>Username:</b>
               </label>
               <input type="text" 
                      placeholder="Enter Username" 
-                     name="uname" required>
-              
+                     name="uname" required>    
               <label for="psw">
                 <b>Password:</b>
-              </label>
+              </label>	
               <input type="password" 
                      placeholder="Enter Password"
                      name="psw" required>
-
               <button type="submit"> Login </button>
               <button type="button" 
                     onclick="document.getElementById('id01').style.display='none'" 
                     class="cancelbtn"> Cancel </button>
-
              <label>
               <input type="checkbox" 
                      checked="checked" 
                      name="remember"> Remember me </label>
             </div>
-  
             <div class="container"
                  style="background-color:#f1f1f1">
-            
             <span class="psw"> 
-                
-              <a href="#" style="float:left;"> 
-                Forgot password? 
-              </a> 
+              <a href="#" style="float:left;"> Forgot password? </a> 
             </span>
             </div>
+				
             </form>
-  
-          <script>
+         
+		</div>
+    <h1>MARK</h1>
+		
+		<button type="submit" 
+                onclick="document.getElementById('id01').style.display='block'" 
+                style="max-width:200px;">
+                Login
+        </button>
+			   <script>
             let modal = document.getElementById('id01');
                 window.onclick = function(event) 
                 {
@@ -80,47 +79,85 @@
                 }
           </script>
 
+     </div>
+		
     </header>
     
-    <div class= page>
-      <div class= nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="message.html">Message</a>
-        <a href="projects.html">Projects</a>
+    <div class= "page">
+     
+         
          <!-- Button to open the modal login form -->
-        <button type="submit" 
-                onclick="document.getElementById('id01').style.display='block'" 
-                style="max-width:200px;">
-                Login
-        </button>
-
-     </div>
-
-     <div class= navRibbon></div>
-      <main>
-       
+        
+		  
+		 
+		 <main>
        <br>
       
-        <h2>Hello World!</h2>
-        <p>Hi this is my first website in a looong time. still trying to figure 
-          this out!</p>
-       
-        <script>
-          let test = document.write("Test", ''); 
-          let apples = "2";
-          let oranges = "3";
-          // both values converted to numbers before the binary plus, just the next step is to do a game engine for the portfolio
-          document.write( +apples + +oranges );
+        <h2>Hello!</h2>
+			 
+			 <h2>About me!</h2>
+        <p>
+          I ended up joining the military for college and 
+          pursue my career in software development. While I was in, I learned many, many
+          things about computers, electronics, and heavy machines as a Fire-Controlman. 
+          After my contract was up I decided to go back home and continue to pursue 
+          my career. The things I like to do for fun are pretty simple, play games, 
+		 watch anime and kinda of engineer my way out of problem i create for myself.
+			My hobbies include but are not limited 
+          to: illustrating, pixel art, electronics repair (laptops and 
+          other PCBs), sleeping and eating fine foods.
+        </p>
+			  
+			 <br>
+			 
+			  <h2>I'm hosted with GitHub Pages!</h2>
+        <p>
+          Currently have some pixel art to show off for the game I've been trying to develop during my underways.
+        </p>
+          <br>
 
-        </script>
+          <!-- Mini Game engine maybe -->
+        <canvas id="canvas" width="200" height="100"></canvas>
+            <script>
+                    const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
 
-<div class= "footer-wrapper">
+            ctx.fillStyle = 'black';
+            ctx.fillRect(10, 10, 150, 100);
+            </script>
+ 
+			 <br>
+
+      <div class="message-wrapper">
+         <div class="messagePage" >
+          <form action="https://formspree.io/mgenywgo" method="POST" style="border: none; padding:80px;">
+            <label>
+              
+             <div>Your email:</div>
+               
+                  <div><input type="text" name="_replyto" style="max-width: 300px; min-width:200px; margin-left:100px ;"></div>
+             </label>
+             
+            <label>
+             <div>Your message:</div>
+               <br>
+                  <div><textarea name="message"style="max-width: 700px; min-width:400px; min-height:200px; margin-left:100px ;"></textarea></div>
+            </label>
+               <br>
+                  <div><button type="submit" style="max-width: 200px; min-width:80px; margin-right:200px;" >Send</button></div>
+                <br>
+          </form>
+          <br>
+        </div>
+      </div>
+			 
+			 <br><br><br><br><br>
+			 <br><br><br><br><br>
+			 <div class= "footer-wrapper">
   <br>
-
   <div class="flex-container">
-    <div><a href="https://twitter.com/MarcusHelms7">Twitter                          </a></div>
-    <div><a href="employee777.github.io">Github                                      </a></div>
+    <div><a href="https://twitter.com/MarcusHelms7">Twitter</a></div>
+    <div><a href="employee777.github.io">Github</a></div>
   </div>
     
 
@@ -129,10 +166,20 @@
     <div><a href="https://www.linkedin.com/in/marcus-h-8b670a128/">Linkedin          </a></div>
     <br><br><br><br><br>
   </div>
-
-      </main>
-    
-    </div>
+</div>		 
+			 
+			 <script>
+          let test = document.write("Test", ''); 
+          let apples = "2";
+          let oranges = "3";
+          // both values converted to numbers before the binary plus, just the next step is to do a game engine for the portfolio
+          document.write( +apples + +oranges );
+        </script>
+			 
+       </main>
+		</div>
+	
+     <div class= "navRibbon"></div>
 
   </body>
 

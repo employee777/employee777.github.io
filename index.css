@@ -1,16 +1,10 @@
 .page {
   position: relative;
-  max-width: 1020px;
+  max-width: 720px;
   min-height:700px;
   max-height: 100%;
   margin: auto;
   padding: 30px;
-  background-color: whitesmoke;
-  border-top:1px solid white;
-  border-right:2px solid rgba(49, 49, 49, .3);
-  border-bottom:2px solid rgba(49, 49, 49, .3);
-  border-left:1px solid white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
   font-family:  Helvetica;
 }
 
@@ -25,11 +19,11 @@ body {
 }
 
 h1 {
-  color: whitesmoke;
-  text-align: center;
+	padding-top: -30px;
+  color: black;
+  text-align: match-parent;
   margin: auto;
-  padding: 20px;
-  font-size: 50px ;
+  font-size: 170px ;
   font-family:  Helvetica;
 }
   
@@ -39,37 +33,22 @@ p {
 }
 
 header {
-  background-image: url("BGRD1.png");
-  background-repeat: repeat;
-  margin-left: auto;
-  margin-right: auto;
-  padding:  auto;
-  font-family:  Helvetica;
+  padding-top: 50px;
+	height: 160px;
+  margin: auto;
+  padding: auto;
+  font-family: Helvetica;
 }
-
-header h1{
-  text-shadow: 5px 5px 7px black,-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-header a{
-  text-align: right; 
-  margin-right: 30px;
-  font-family:  Helvetica;
-}
-
 
 .nav{
-  height: 50px;
-  margin-left: -50px;
-  margin-right: -100px;
-  padding-left:50px;
+  margin: auto;
+  height: 150px;
   font-family:  Helvetica;
   background-color: turquoise;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-.navRibbon{
-  background-image: url(navRibbon.png);
+.Ribbon{
+  background-image: url(Ribbon.png);
   background-repeat: no-repeat;
   float: left;
   margin-left: -50px;
