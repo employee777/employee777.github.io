@@ -1,83 +1,42 @@
-.page {
-  position: relative;
-  max-width: 720px;
-  min-height:700px;
-  max-height: 100%;
-  margin: auto;
-  padding: 30px;
-  font-family:  Helvetica;
-}
-
 body {
-  
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  min-width: 100%;
+  margin: auto;
+  padding: auto;
+  max-width: 700px;
+  min-width: 80%;
   max-height: 100%;
   font-family: Arial;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow: auto
+}
+header {
+  margin-top: -50px;
+  padding-top: 50px;
+  width: auto;
+  height: 200px;
+  margin: auto;
+  padding: auto;
+  font-family: Helvetica;
+  background-color: turquoise;
 }
 
 h1 {
-	padding-top: -30px;
+  width: 700px;
+	padding: -30px;
   color: black;
   text-align: match-parent;
   margin: auto;
   font-size: 170px ;
+  font-variant-position: inherit;
   font-family:  Helvetica;
 }
   
 p {
   font-family:  Helvetica;
   font-size: 20px;
-}
-
-header {
-  padding-top: 50px;
-	height: 160px;
-  margin: auto;
-  padding: auto;
-  font-family: Helvetica;
-}
-
-.nav{
-  margin: auto;
-  height: 150px;
-  font-family:  Helvetica;
-  background-color: turquoise;
-}
-
-.Ribbon{
-  background-image: url(Ribbon.png);
-  background-repeat: no-repeat;
-  float: left;
-  margin-left: -50px;
-  min-width: 19px;
-  min-height: 36px;
-  z-index: -1;
-}
-
-.nav a{
-  font-family:  Helvetica;
-  margin-right: 5px;
-  float: left;
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-right: 15px;
-  padding-bottom: 0px;
-}
-
-.nav button{
-  font-family:  Helvetica;
-  font-size: 17px;
-  margin-right: 30px;
-  float: right;
-  padding-left: 15px;
-  padding-top: 14px;
-  padding-right: 15px;
-  padding-bottom: 10px;
-  background-color: turquoise;
-  border: none;
+  display: grid;
 }
 
 /* Set a style for all buttons */
@@ -91,6 +50,7 @@ button {
   padding-right: 15px;
   padding-bottom: 10px;
   cursor: pointer;
+  display: grid;
 }
 
 /* Add a hover effect for buttons */
@@ -110,69 +70,11 @@ a:hover, a:active {
  opacity: 0.8;
 }
 
-
-.flex-container {
-  margin: none;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
+.button2{
+ background-image:"/4bitButton.png"  ;
 }
-
-.flex-container>div {
-  color: black;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 15px;
-  font-family:  Helvetica;
-}
-
-.footer-wrapper{
-  margin:auto;
-  border-top: slategray;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5px auto; /* 15% from the top and centered */
-  border: 1px solid #888;
-  min-width: 100px;
-  max-width: 400px; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  /* Position it in the top right corner outside of the modal */
-  position: absolute;
-  right: 25px;
-  top: 0;
-  font-size: 35px;
-}
-
-/* Close button on hover */
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
+.button2 a:active{
+  background-image:"/4bitButtonPressed.png" ;
 }
 
 /* Add Zoom Animation */
@@ -192,54 +94,74 @@ a:hover, a:active {
 }
 
 
-/* Full-width inputs */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
 }
 
-/* Center the avatar image inside this container */
-.imgcontainer {
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
   text-align: center;
-  margin: 24px 0 12px 0;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
 }
 
-/* Avatar image */
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 
-/* Add padding to containers */
-.container {
-  padding: 16px;
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
 }
 
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
     width: 100%;
   }
 }
