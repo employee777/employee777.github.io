@@ -1,139 +1,103 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="index.css">
-    <title>Marcus Helms</title>
+<meta charset="UTF-8">
+<meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel ="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    
 </head>
 
 <body>
-<div class= background>
-  </div>
-    <header>
-        <h1>Marcus Helms</h1>
-            <br><br>
 
-          <!-- The Modal -->
-          <div id="id01" class="modal">
-            <span onclick="document.getElementById('id01').style.display='none'" 
-                  class="close" 
-                  title="Close Modal"> &times;
-            </span>
-  
-            <!-- Modal Content -->
-            <form class="modal-content animate" 
-                  action="/action_page.php">
-
-            <div class="imgcontainer">
-              <img src="img_avatar2.png" 
-                   alt="Avatar" 
-                   class="avatar">
-            </div>
-  
-            <div class="container">
-
-              <label for="uname">
-                <b>Username:</b>
-              </label>
-              <input type="text" 
-                     placeholder="Enter Username" 
-                     name="uname" required>
-              
-              <label for="psw">
-                <b>Password:</b>
-              </label>
-              <input type="password" 
-                     placeholder="Enter Password"
-                     name="psw" required>
-
-              <button type="submit"> Login </button>
-              <button type="button" 
-                    onclick="document.getElementById('id01').style.display='none'" 
-                    class="cancelbtn"> Cancel </button>
-
-             <label>
-              <input type="checkbox" 
-                     checked="checked" 
-                     name="remember"> Remember me </label>
-            </div>
-  
-            <div class="container"
-                 style="background-color:#f1f1f1">
-            
-            <span class="psw"> 
-                
-              <a href="#" style="float:left;"> 
-                Forgot password? 
-              </a> 
-            </span>
-            </div>
-            </form>
-  
-          <script>
-            let modal = document.getElementById('id01');
-                window.onclick = function(event) 
-                {
-                    if (event.target == modal) 
-                    {
-                        modal.style.display = "none";
-                    }
-                }
-          </script>
-
+    <header style="grid-row: 1 / span 3;">
+      <h1>MARK</h1><button style ="float: right;">Change Theme</button>
+         
     </header>
-    
-    <div class= page>
-      <div class= nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="message.html">Message</a>
-        <a href="projects.html">Projects</a>
-         <!-- Button to open the modal login form -->
-        <button type="submit" 
-                onclick="document.getElementById('id01').style.display='block'" 
-                style="max-width:200px;">
-                Login
-        </button>
 
-     </div>
 
-     <div class= navRibbon></div>
-      <main>
-       
-       <br>
-      
-        <h2>Hello World!</h2>
-        <p>Hi this is my first website in a looong time. still trying to figure 
-          this out!</p>
-       
+    <section style="grid-row: 2;"><h3></h3>
+        <p></p>
+    </section>
+
+    <article style="grid-row: 2;"><h2>Game Design</h2>
+        <p>Check out this prototype game!</p>
+        
+        <img style ="border-radius: 5px;" src="game_demo.gif" alt="Game Demo" width="120" height="80"></img>
+        <img id="PlayButton" alt="Game" src="4bitPlayButton.png" onclick="startGame()"></img>
+        <p>This first game is a asteroids type shooter/bullet hell</p>
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+  
+    <!-- Modal Content (The Image) -->
+    <canvas class ="Game" id="Game"> 
         <script>
-          let test = document.write("Test", ''); 
-          let apples = "2";
-          let oranges = "3";
-          // both values converted to numbers before the binary plus, just the next step is to do a game engine for the portfolio
-          document.write( +apples + +oranges );
+        
+</script>
+</canvas>
+  
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+    </div>
+        <script>
+
+                // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("PlayButton");
+var modalImg = document.getElementById("Game");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
         </script>
 
-<div class= "footer-wrapper">
-  <br>
+    </article>
 
-  <div class="flex-container">
-    <div><a href="https://twitter.com/MarcusHelms7">Twitter                          </a></div>
-    <div><a href="employee777.github.io">Github                                      </a></div>
-  </div>
+
+    <section style="grid-row: 3;"><h3>About me!</h3>
+        <p> I ended up joining the military and after my contract was up, decided to 
+            pursue my career in software development. While I was in, I learned a-lot
+            about how computers, electronics, and heavy machines function as a Fire-Controlman (who doesn't like giant guns?). 
+            The things I like to do for fun are pretty simple, play games, 
+            watch anime and kinda of engineer my way out of problem I create for myself.
+            My hobbies include but are not limited to: illustrating, pixel art, 
+            tinkering and electronics repair (laptops and 
+            other PCBs), sleeping and eating fine foods.</p>
+    </section>
+
     
-
-  <div class="flex-container">
-    <div><a href="https://www.facebook.com/profile.php?id=100008358964248">Facebook  </a></div>
-    <div><a href="https://www.linkedin.com/in/marcus-h-8b670a128/">Linkedin          </a></div>
-    <br><br><br><br><br>
-  </div>
-
-      </main>
     
-    </div>
+   
 
-  </body>
+    <aside style="grid-row: 3;"><p></p>
+        <p></p>
+    </aside>
 
+    <footer style="grid-row: 4;">
+        <p><a href="https://github.com/employee777/employee777">github</a><br><a href="https://employee777.github.io/">Website</a></p>
+
+        <a href="https://twitter.com/MarcusHelms7">Twitter                          </a>
+    </footer>
+
+</body>
+<script src = "game.js" type = "text/javascript"></script>
 </html>
