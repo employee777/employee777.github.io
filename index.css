@@ -15,11 +15,16 @@ header {
   margin-top: -50px;
   padding-top: 50px;
   width: auto;
+  min-width:700px;
   height: 200px;
   margin: auto;
   padding: auto;
   font-family: Helvetica;
   background-color: turquoise;
+}
+
+main {
+  width:500px;
 }
 
 h1 {

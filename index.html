@@ -17,7 +17,7 @@
       <h1>MARK</h1><button style ="float: right;">Change Theme</button>
          
     </header>
-
+    <main>
 
     <section style="grid-row: 2;"><h3></h3>
         <p></p>
@@ -45,30 +45,7 @@
     <!-- Modal Caption (Image Text) -->
     <div id="caption"></div>
     </div>
-        <script>
-
-                // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("PlayButton");
-var modalImg = document.getElementById("Game");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-        </script>
+        <script src = "modal.js" type = "text/javascript"></script>
 
     </article>
 
@@ -91,6 +68,8 @@ span.onclick = function() {
     <aside style="grid-row: 3;"><p></p>
         <p></p>
     </aside>
+
+</main>
 
     <footer style="grid-row: 4;">
         <p><a href="https://github.com/employee777/employee777">github</a><br><a href="https://employee777.github.io/">Website</a></p>
