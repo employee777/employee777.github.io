@@ -6,40 +6,49 @@ body {
   max-height: 100%;
   font-family: Arial;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-flow: column nowrap;
   align-items: flex-start;
   overflow: auto
 }
 header {
-  margin-top: -50px;
-  padding-top: 50px;
-  width: auto;
-  min-width:700px;
+  position: fixed;
+  width: 80%;
+  min-width: 550px;
   height: 200px;
-  margin: auto;
-  padding: auto;
+  align-self: stretch;
   font-family: Helvetica;
   background-color: turquoise;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  
+  right: auto;
+  width: auto;
+}
+
+nav ul li{
+  display: inline-block;
 }
 
 main {
-  width:500px;
+  display: block;
+  width:auto;
+  align-self: stretch;
 }
 
 h1 {
-  width: 700px;
-	padding: -30px;
+  margin: 0px;
+  top: 0px;
+  float: left;
   color: black;
-  text-align: match-parent;
-  margin: auto;
   font-size: 170px ;
-  font-variant-position: inherit;
-  font-family:  Helvetica;
+  font-family:  sans-serif;
 }
   
 p {
-  font-family:  Helvetica;
+  font-family:  sans-serif;
   font-size: 20px;
   display: grid;
 }
@@ -106,6 +115,8 @@ a:hover, a:active {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
+  padding-left: 25%;
+  padding-right: 25%;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -118,9 +129,10 @@ a:hover, a:active {
 /* Modal Content (Image) */
 .modal-content {
   margin: auto;
-  display: block;
   width: 80%;
   max-width: 700px;
+  align-self: center;
+  position: absolute;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
