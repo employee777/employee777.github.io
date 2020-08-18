@@ -6,27 +6,38 @@
 <meta name ="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo</title>
     <link rel ="stylesheet" href="index.css">
+    <link rel ="stylesheet" href="nav.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
     
 </head>
 
 <body>
 
     <header>
-        <h1>MARK</h1> 
-        <nav><ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Message</a></li>
-            <li><a href="#">Links</a></li>
+        <nav src ="nav.css" rel ="stylesheet" type = "text/css">
+        <li class="logo"><a href="#"><h1>MARK</h1> </a></li>
+        <ul class="menu">
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#">Message</a></li>
+            <li class="item has-submenu" ><a tabindex="0">Links</a>
+                <ul class="submenu">
+                    <li class="subitem"><a href="https://github.com/employee777/employee777">Github</a></li>
+                    <li class="subitem"><a href="https://twitter.com/employee777">Twitter</a></li>
+                    </ul>
+            </li>
+            <li class="item"> <label class="switch"><input type="checkbox">
+                <span class="slider round"></span></li>
+            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul></nav>                   
     </header>
 
     <main>
     <article><h2>Game Design</h2>
             <p>Check out this prototype game!</p>
-            <img style ="border-radius: 5px;" src="game_demo.gif" alt="Game Demo" width="120" height="80"></img>
-            <img id="PlayButton" alt="Game" src="4bitPlayButton.png" onclick="startGame()"></img>
+            <img style ="border-radius: 5px;" src="game_demo.gif" alt="Game Demo" width="120" height="80"><img id="PlayButton" alt="Game" src="4bitPlayButton.png"width="48" height="16" onclick="startGame()"></img></img>
+            
             <p>This first game is a asteroids type shooter/bullet hell</p>
             
         <!-- The Modal -->
@@ -58,13 +69,12 @@
 </main>
 
     <footer style="grid-row: 4;">
-        <a href="https://github.com/employee777/employee777">github</a>
-            <br>
-        <a href="https://employee777.github.io/">Website</a>
-            <br>
-        <a href="https://twitter.com/MarcusHelms7">Twitter</a>
+        <br>
+        <br>
+        <br>
     </footer>
 
 </body>
 <script src = "game.js" type = "text/javascript"></script>
+<script src = "nav.js" type = "text/javascript"></script>
 </html>

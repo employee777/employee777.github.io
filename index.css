@@ -1,42 +1,42 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+ 
+}
 body {
+  display: flex;
+  font-family: sans-serif;
+  font-size: 16px;
   margin: auto;
   padding: auto;
-  max-width: 700px;
   min-width: 80%;
   max-height: 100%;
-  font-family: Arial;
-  display: flex;
   flex-flow: column ;
   align-items: flex-start;
-  overflow: auto
+  list-style-type: none;
+  overflow: auto;
 }
+
 header {
   position: fixed;
-  width: 80%;
-  min-width: 550px;
-  height: 200px;
+  z-index: 1;
+  width: 100%;
+  height: 180px;
   align-self: stretch;
   font-family: Helvetica;
   background-color: turquoise;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav {
-  
-  right: auto;
-  width: auto;
-}
-
-nav ul li{
-  display: inline-block;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 main {
   position: relative;
   margin-top: 250px;
   width:auto;
-  align-self: stretch;
+  max-width: 960px;
+  align-self: center;
 }
 
 h1 {
@@ -44,7 +44,6 @@ h1 {
   top: 0px;
   float: left;
   color: black;
-  font-size: 170px ;
   font-family:  sans-serif;
 }
   
@@ -52,37 +51,6 @@ p {
   font-family:  sans-serif;
   font-size: 20px;
   display: flex;
-}
-
-/* Set a style for all buttons */
-button {
-  font-family:  Helvetica;
-  font-size: 15px;
-  margin-right: 30px;
-  float: right;
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-right: 15px;
-  padding-bottom: 10px;
-  cursor: pointer;
-  display: flex;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
-
-a:link, a:visited {
-  color: black;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active {
- opacity: 0.8;
 }
 
 .button2{
@@ -175,11 +143,4 @@ a:hover, a:active {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
 }
