@@ -37,6 +37,7 @@ main {
   width:auto;
   max-width: 960px;
   align-self: center;
+  padding: 25px;
 }
 
 h1 {
