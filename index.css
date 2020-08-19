@@ -47,6 +47,13 @@ h1 {
   font-family:  sans-serif;
 }
   
+.HeroIMG{
+  max-width: 480px;
+  max-height: 320px;
+  padding-right: 50px;
+  padding-left: 25px;
+}
+
 p {
   font-family:  sans-serif;
   font-size: 20px;
@@ -88,15 +95,20 @@ padding: 15px;
 }
 
 .aboutMe{
+  display: flex;
   flex-direction: column;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 25px;
+  
 }
 
 .aboutMe p{
-  font-size: 16px;
+  padding-top: 50px;
+  font-size: 19px;
   margin-left: 25px;
+  flex-direction: row;
+  
 }
 
 .description{
