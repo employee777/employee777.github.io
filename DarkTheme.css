@@ -1,0 +1,416 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   
+  }
+  body {
+      background-color: rgb(56, 56, 56);
+    display: flex;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: auto;
+    padding: auto;
+    min-width: 80%;
+    max-height: 100%;
+    flex-flow: column ;
+    align-items: flex-start;
+    list-style-type: none;
+    overflow: auto;
+  }
+  
+  header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 180px;
+    align-self: stretch;
+    font-family: Helvetica;
+    background-color: rgb(255, 146, 44);
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  
+  main {
+    position: relative;
+    margin-top: 250px;
+    width:auto;
+    max-width: 960px;
+    align-self: center;
+    padding: 25px;
+  }
+  
+  h1 {
+    margin: 0px;
+    top: 0px;
+    float: left;
+    color: black;
+    font-family:  sans-serif;
+  }
+    
+  p {
+    font-family:  sans-serif;
+    font-size: 20px;
+    display: flex;
+  }
+  
+  .PlayButton{
+    position: absolute; 
+    z-index: 1; 
+    width: 48px;
+    height: 16px;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+  
+  
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    padding-left: 25%;
+    padding-right: 25%;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    width: 80%;
+    max-width: 700px;
+    align-self: center;
+    position: absolute;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* Basic styling */
+
+header nav {
+    background-color: rgb(255, 146, 44);
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  header a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .menu,
+  .submenu {
+    align-self: flex-end;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 100px;
+    padding: 7.5px 10px 7.5px 0;
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+  .item.button {
+    padding: 9px 5px;
+  }
+
+  .item:not(.button) a:hover,
+  .item a:hover::after {
+    color: rgb(0, 0, 0);
+  }
+
+  .logo {
+    font-size:80px;
+    padding: 7.5px 10px 7.5px 0;
+  }
+
+  .menu {
+    background-color: rgb(255, 146, 44);
+    display: flex;
+    align-self: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu li a {
+    background-color: rgb(255, 146, 44);
+    display: block;
+    padding: 15px;
+    border-color: lightblue;
+  }
+  
+  .menu li.subitem a {
+    background-color: rgb(255, 146, 44);
+    padding: 15px;
+  }
+
+  .toggle {
+    order: 1;
+    font-size: 20px;
+  }
+
+  .item.button {
+    order: 2;
+  }
+
+  .item :hover{
+    background-color: cadetblue;
+    border-radius: 5px;
+  }
+
+  .item {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .active .item {
+    display: block;
+  }
+
+  .button.secondary {
+    /* divider between buttons and menu links */
+    border-bottom: 1px #444 solid;
+  }
+
+  /* Submenu up from mobile screens */
+  .submenu {
+    display: none;
+  }
+
+  .submenu-active .submenu {
+    display: flex;
+      flex-flow: row;
+      position: absolute;
+      border-top-style: solid;
+      background-color: rgb(255, 146, 44);
+  }
+
+  .has-submenu i {
+    font-size: 12px;
+  }
+
+  .has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900;
+    content: "\f078";
+    color: black;
+    padding-left: 5px;
+  }
+
+  .subitem a {
+    padding: 10px 15px;
+  }
+
+  .submenu-active {
+    background-color:  rgb(255, 146, 44);
+    border-radius: 3px;
+  }
+  
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  
+  /* Set a style for all buttons */
+  button {
+    font-family:  Helvetica;
+    font-size: 15px;
+    margin-right: 30px;
+    float: right;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  a:link, a:visited {
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+   opacity: 0.8;
+  }
+  
+  
+  
+  
+  /* Tablet menu */
+  @media all and (max-width: 853px) {
+    
+  
+    .menu {
+      width: 100%;
+     flex-direction: column;
+      background-color: rgb(255, 146, 44);
+  }
+  .logo {
+      flex: 1;
+      height: 150px;
+  }
+  .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+  }
+  .toggle {
+      flex: 1;
+      text-align: right;
+      order: 2;
+  }
+  
+  .submenu-active .submenu {
+    display: block;
+    width: 100%;
+    flex-flow: row;
+    position: inherit;
+  }
+  
+  
+  }

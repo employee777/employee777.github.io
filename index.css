@@ -20,7 +20,7 @@ body {
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 180px;
   align-self: stretch;
@@ -54,11 +54,46 @@ p {
   display: flex;
 }
 
-.button2{
- background-image:"/4bitButton.png"  ;
+.PlayButton{
+  scale: 2;
+  width: 48px;
+  height: 16px;
 }
-.button2 a:active{
-  background-image:"/4bitButtonPressed.png" ;
+
+section{
+  display: flex;
+}
+.Game1{
+flex-direction: row;
+padding: 15px;
+}
+
+.Game1 article{
+  padding: 15px;
+}
+
+.Game2{
+  flex-direction: row;
+  padding: 15px;
+}
+.Game2 article{
+  padding: 15px;
+}
+
+.aboutMe{
+  flex-direction: column;
+}
+
+.aboutMe p{
+  font-size: 16px;
+}
+
+
+footer{
+  bottom: 0px;
+  position:relative;
+  flex-flow: column-reverse;
+  align-self: center;
 }
 
 /* Add Zoom Animation */
@@ -83,7 +118,7 @@ p {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 3; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   padding-left: 25%;
   padding-right: 25%;
@@ -109,7 +144,7 @@ p {
 #caption {
   margin: auto;
   display: block;
-  width: 80%;
+  width: 100%;
   max-width: 700px;
   text-align: center;
   color: #ccc;

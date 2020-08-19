@@ -14,6 +14,7 @@ header a {
   color: black;
   text-decoration: none;
 }
+
 .menu,
 .submenu {
   align-self: flex-end;
@@ -22,29 +23,31 @@ header a {
   align-items: center;
   flex-flow: row-reverse;
   justify-content: space-between;
-  
 }
+
 .logo {
   font-size: 100px;
   padding: 7.5px 10px 7.5px 0;
 }
+
 .item {
   padding: 10px;
-  
 }
+
 .item.button {
   padding: 9px 5px;
 }
+
 .item:not(.button) a:hover,
 .item a:hover::after {
   color: rgb(0, 0, 0);
 }
-/* Mobile menu */
 
 .logo {
   font-size:80px;
   padding: 7.5px 10px 7.5px 0;
 }
+
 .menu {
   background-color: turquoise;
   display: flex;
@@ -53,6 +56,7 @@ header a {
   justify-content: space-between;
   align-items: center;
 }
+
 .menu li a {
   background-color: turquoise;
   display: block;
@@ -60,50 +64,58 @@ header a {
   border-color: lightblue;
 }
 
-
 .menu li.subitem a {
   background-color: turquoise;
   padding: 15px;
 }
+
 .toggle {
   order: 1;
   font-size: 20px;
 }
+
 .item.button {
   order: 2;
 }
+
 .item :hover{
   background-color: cadetblue;
   border-radius: 5px;
 }
+
 .item {
   order: 3;
   width: 100%;
   text-align: center;
   display: none;
 }
+
 .active .item {
   display: block;
 }
+
 .button.secondary {
   /* divider between buttons and menu links */
   border-bottom: 1px #444 solid;
 }
+
 /* Submenu up from mobile screens */
 .submenu {
   display: none;
 }
+
 .submenu-active .submenu {
   display: flex;
     flex-flow: row;
     position: absolute;
     border-top-style: solid;
     background-color: turquoise;
-
 }
+
 .has-submenu i {
   font-size: 12px;
 }
+
 .has-submenu > a::after {
   font-family: "Font Awesome 5 Free";
   font-size: 12px;
@@ -114,16 +126,15 @@ header a {
   padding-left: 5px;
   
 }
+
 .subitem a {
   padding: 10px 15px;
 }
+
 .submenu-active {
   background-color:  turquoise;
   border-radius: 3px;
 }
-
-
-
 
 /* The switch - the box around the slider */
 .switch {
@@ -188,13 +199,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-
-
-
-
-
-
-
 /* Set a style for all buttons */
 button {
   font-family:  Helvetica;
@@ -227,38 +231,33 @@ a:hover, a:active {
 }
 
 
-
-
 /* Tablet menu */
 @media all and (max-width: 853px) {
-  
 
   .menu {
     width: 100%;
    flex-direction: column;
     background-color: turquoise;
-}
-.logo {
-    flex: 1;
-    height: 150px;
-}
-.item.button {
-    width: auto;
-    order: 1;
+  }
+  .logo {
+      flex: 1;
+      height: 150px;
+  }
+  .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+  }
+  .toggle {
+      flex: 1;
+      text-align: right;
+      order: 2;
+  }
+
+  .submenu-active .submenu {
     display: block;
-}
-.toggle {
-    flex: 1;
-    text-align: right;
-    order: 2;
-}
-
-.submenu-active .submenu {
-  display: block;
-  width: 100%;
-  flex-flow: row;
-  position: inherit;
-}
-
-
+    width: 100%;
+    flex-flow: row;
+    position: inherit;
+  }
 }
