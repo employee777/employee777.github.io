@@ -411,6 +411,8 @@ a:hover, a:active {
 
   header nav {
     margin:0px;
+    overflow-y: scroll;
+  -webkit-overflow-scrolling:touch;
   }
 
   .menu {
