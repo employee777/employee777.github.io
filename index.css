@@ -129,8 +129,6 @@ footer{
 }
 
 
-
-
 /*                 N A V I G A T I O N                      */
 
 /* Basic styling */
@@ -256,6 +254,7 @@ header a {
 }
 
 .has-submenu > a::after {
+  outline: none;
   font-family: "Font Awesome 5 Free";
   font-size: 12px;
   line-height: 16px;
@@ -271,6 +270,7 @@ header a {
 }
 
 .submenu-active {
+  outline: none;
   background-color:  #32e0c4;
   border-radius: 3px;
 }
