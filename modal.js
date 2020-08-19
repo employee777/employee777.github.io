@@ -4,6 +4,7 @@
 
                 // Get the image and insert it inside the modal - use its "alt" text as a caption
                 var img = document.getElementById("PlayButton");
+                var img = document.getElementById("PlayButton");
                 var modalImg = document.getElementById("Game");
                 var captionText = document.getElementById("caption");
                 img.onclick = function(){

@@ -35,7 +35,7 @@ function closeSubmenu(e) {
 }
 /* Event Listeners */
 
-document.addEventListener("click", closeSubmenu, false);
+document.addEventListener("click", closeSubmenu, true);
 
 toggle.addEventListener("click", toggleMenu, false);
 for (let item of items) {
@@ -44,3 +44,11 @@ for (let item of items) {
   }
   item.addEventListener("keypress", toggleItem, false);
 }
+
+
+
+
+
+
+               
+                

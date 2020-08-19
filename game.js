@@ -135,7 +135,7 @@ frame sets. */
   each sprite image in the sprite sheet, just like a tile sheet and a tile map. */
   sprite_sheet = {
 
-    frame_sets:[[0, 1], [2, 3], [4, 5]],// standing still, walk right, walk left
+    frame_sets:[[0, 1, 1, 1, 1], [2, 3], [4, 5]],// standing still, walk right, walk left
     image:new Image()
 
   };
@@ -210,16 +210,7 @@ frame sets. */
     /* Draw the background. */
     buffer.fillStyle = "#7ec0ff";
     buffer.fillRect(0, 0, buffer.canvas.width, buffer.canvas.height);
-    buffer.strokeStyle = "#8ed0ff";
-    buffer.lineWidth = 10;
-    buffer.beginPath();
-    buffer.moveTo(0, 0);
-    buffer.bezierCurveTo(40, 20, 40, 0, 80, 0);
-    buffer.moveTo(0, 0);
-    buffer.bezierCurveTo(40, 20, 40, 20, 80, 0);
-    buffer.stroke();
-    buffer.fillStyle = "#009900";
-    buffer.fillRect(0, 36, buffer.canvas.width, 4);
+   
 
     /* When you draw your sprite, just use the animation frame value to determine
     where to cut your image from the sprite sheet. It's the same technique used
@@ -254,8 +245,8 @@ frame sets. */
     //// INITIALIZE ////
   ////////////////////
 
-  buffer.canvas.width = 80;
-  buffer.canvas.height = 40;
+  buffer.canvas.width = 256;
+  buffer.canvas.height = 226;
 
   window.addEventListener("resize", resize);
 
