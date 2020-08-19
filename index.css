@@ -407,12 +407,10 @@ a:hover, a:active {
 /*           R E S I Z E       S E C T I O N             */
 
 /* Tablet menu */
-@media all and (max-width: 943px) {
+@media all and (max-width: 959px) {
 
   header nav {
     margin:0px;
-    overflow-y: scroll;
-  -webkit-overflow-scrolling:touch;
   }
 
   .menu {
