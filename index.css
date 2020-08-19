@@ -16,6 +16,7 @@ body {
   align-items: flex-start;
   list-style-type: none;
   overflow: auto;
+  background-color: #eeeeee;
 }
 
 header {
@@ -49,13 +50,8 @@ h1 {
 }
   
 .HeroIMG{
-  display: flex;
-  max-width:720px;
-  border-radius: 5px;
-  padding-right: 50px;
-  padding-left: 25px;
-  justify-content: center;
-  align-self: center;
+  max-width:360px;
+  border-radius: 420px;
 }
 
 p {
@@ -134,24 +130,6 @@ footer{
   flex-flow: column-reverse;
   align-self: center;
 }
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-}
-
-
 /*                 N A V I G A T I O N                      */
 
 /* Basic styling */
@@ -192,15 +170,6 @@ header a {
   padding: 10px;
 }
 
-.item.button {
-  padding: 9px 5px;
-}
-
-.item:not(.button) a:hover,
-.item a:hover::after {
-  color: rgb(0, 0, 0);
-}
-
 .menu {
   background-color: #32e0c4;
   display: flex;
@@ -217,24 +186,9 @@ header a {
   border-color: #eeeeee;
 }
 
-.menu li.subitem a {
-  background-color: #32e0c4;
-  padding: 15px;
-}
-
 .toggle {
   order: 1;
   font-size: 20px;
-}
-
-.item.button {
-  order: 2;
-}
-
-.item a:hover{
-  color: #eeeeee;
-  opacity: .5;
-  border-radius: 5px;
 }
 
 .item {
@@ -248,10 +202,6 @@ header a {
   display: block;
 }
 
-.button.secondary {
-  /* divider between buttons and menu links */
-  border-bottom: 1px #393e46;
-}
 
 /* Submenu up from mobile screens */
 .submenu {
@@ -264,10 +214,6 @@ header a {
     position: absolute;
     border-top-style: solid;
     background-color: 32e0c4;
-}
-
-.has-submenu i {
-  font-size: 12px;
 }
 
 .has-submenu > a::after {
@@ -355,25 +301,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* Set a style for all buttons */
-button {
-  font-family:  Helvetica;
-  font-size: 15px;
-  margin-right: 30px;
-  float: right;
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-right: 15px;
-  padding-bottom: 10px;
-  cursor: pointer;
-  display: flex;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
-
 a:link, a:visited {
   color: black;
   padding: 14px 25px;
@@ -409,6 +336,11 @@ a:hover, a:active {
 /* Tablet menu */
 @media all and (max-width: 959px) {
 
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+
   header nav {
     margin:0px;
   }
@@ -421,11 +353,6 @@ a:hover, a:active {
   .logo {
       flex: 1;
       height: 150px;
-  }
-  .item.button {
-      width: auto;
-      order: 1;
-      display: block;
   }
   .toggle {
       flex: 1;
@@ -477,10 +404,6 @@ a:hover, a:active {
     margin-bottom: 25px;
     text-overflow: clip;
     flex-wrap: wrap;
-  }
-
-  .aboutMe span {
-    flex-direction: column;
   }
 
   .aboutMe p{
