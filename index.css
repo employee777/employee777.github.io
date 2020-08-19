@@ -40,6 +40,7 @@ main {
 }
 
 h1 {
+  
   margin: 0px;
   top: 0px;
   float: left;
@@ -48,14 +49,18 @@ h1 {
 }
   
 .HeroIMG{
-  max-width: 480px;
-  max-height: 320px;
+  display: flex;
+  width:720px;
+  border-radius: 5px;
   padding-right: 50px;
   padding-left: 25px;
+  justify-content: center;
+  align-self: center;
 }
 
 p {
-  font-family:  sans-serif;
+  line-height: 40px;
+  font-family:Arial,Helvetica,sans-serif;
   font-size: 20px;
   display: flex;
 }
@@ -96,19 +101,25 @@ padding: 15px;
 
 .aboutMe{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 25px;
-  
+  text-overflow: clip;
+  flex-wrap: wrap;
+}
+
+.aboutMe span {
+  flex-direction: row;
 }
 
 .aboutMe p{
+  text-align: justify;
+  line-height:26px; 
   padding-top: 50px;
   font-size: 19px;
   margin-left: 25px;
   flex-direction: row;
-  
 }
 
 .description{
@@ -174,7 +185,6 @@ header a {
 }
 
 .logo {
-  font-size: 100px;
   padding: 7.5px 10px 7.5px 0;
 }
 
@@ -189,11 +199,6 @@ header a {
 .item:not(.button) a:hover,
 .item a:hover::after {
   color: rgb(0, 0, 0);
-}
-
-.logo {
-  font-size:80px;
-  padding: 7.5px 10px 7.5px 0;
 }
 
 .menu {
@@ -381,9 +386,28 @@ a:hover, a:active {
  opacity: 0.8;
 }
 
+/*         N A V   B A R         */
+
+#navbar {
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#navbar a {
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color: black;
+}
+
+/*           R E S I Z E       S E C T I O N             */
 
 /* Tablet menu */
-@media all and (max-width: 853px) {
+@media all and (max-width: 943px) {
 
   header nav {
     margin:0px;
@@ -415,14 +439,73 @@ a:hover, a:active {
     flex-flow: row;
     position: inherit;
   }
-}
-
-
-
 
 
 /*                 E N D   O F   N A V I G A T I O N                 */
 
+  section{
+    display: flex;
+  }
+
+  .GameDemo {
+    border-radius: 5px;
+    width:250px;
+  }
+
+  .Game1{
+  flex-direction: column;
+  padding: 15px;
+  }
+
+  .Game1 article{
+    padding: 15px;
+  }
+
+  .Game2{
+    flex-direction: column;
+    padding: 15px;
+  }
+  .Game2 article{
+    padding: 15px;
+  }
+
+  .aboutMe{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    text-overflow: clip;
+    flex-wrap: wrap;
+  }
+
+  .aboutMe span {
+    flex-direction: column;
+  }
+
+  .aboutMe p{
+    text-align: justify;
+    line-height:26px; 
+    padding-top: 50px;
+    font-size: 19px;
+    margin-left: 25px;
+    flex-direction: row;
+  }
+
+  .description{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+
+  footer{
+    bottom: 0px;
+    position:relative;
+    flex-flow: column-reverse;
+    align-self: center;
+  }
+}
+/*    E N D    O F    R E S I Z E    S E C T I O N     */
 
 
 
@@ -430,6 +513,7 @@ a:hover, a:active {
 
 
 
+/*                T H E    M O D A L    C O N T E N T                 */
 
 /* The Modal (background) */
 .modal {

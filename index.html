@@ -7,15 +7,16 @@
     <title>Demo</title>
     <link rel ="stylesheet" href="index.css">
     <link rel ="stylesheet" href="nav.css">
+    <link rel ="stylesheet" href="glitch.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">  
 </head>
 
 <body>
 
-    <header>
-        <nav>
-        <li class="logo"><a href="#"><h1>MARK</h1> </a></li>
+    <header id="navbar">
+        <nav class="container" >
+        <li class="logo"><a href="#"><h1 class="glitch" data-text="MARK">MARK</h1> </a></li>
         <ul class="menu">
             <li class="item"><a href="#">About</a></li>
             <li class="item"><a href="#">Message</a></li>
@@ -35,18 +36,19 @@
     </header>
 
     <main>
-
-        
-        <section class="aboutMe"><h2>About me!</h2>
-            
-
-            <p> Hello!, I'm a Navy Veteran of 6 years, self proclaimed tinkerer, and I do nerd things. While in the navy, I worked with
+        <section class="aboutMe">
+        <article><h2>About me!</h2>
+            <p> Hello!, I'm a Navy Veteran of 6 years, self proclaimed tinkerer, and I do nerd things. </p>
+                <br>
+                <section><img class="HeroIMG" alt="HeroIMG" src="Workspace.jpg"></section>
+            <article class="description"><p>While in the navy, I worked with
                 computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant guns?). 
                 The things I like to do for fun are pretty simple, play games, 
                 watch anime and kinda of engineer my way out of problems.
                 My hobbies include, but not limited to: illustrating, cooking, 
                 DnD and electronics repair (laptops and 
-                other PCBs), traveling, sleeping and eating fine foods. <img class="HeroIMG" src="Workspace.jpg"></p>
+                other PCBs), traveling, sleeping and eating fine foods.</p></article>
+            </article>
         </section>
 <hr>
         <section class="Game1">
