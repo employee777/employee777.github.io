@@ -8,9 +8,7 @@
     <link rel ="stylesheet" href="index.css">
     <link rel ="stylesheet" href="nav.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">  
 </head>
 
 <body>
@@ -25,7 +23,7 @@
                 <ul class="submenu">
                     <li class="subitem"><a href="https://github.com/employee777/employee777">Github</a></li>
                     <li class="subitem"><a href="https://twitter.com/employee777">Twitter</a></li>
-                    </ul>
+                </ul>
             </li>
             <li class="item"> <label class="switch"><input type="checkbox" onclick="ChangeTheme()">
                 <span class="slider round"></span></li>
@@ -34,76 +32,35 @@
     </header>
 
     <main>
+
+        <section class = "aboutMe"><h3>About me!</h3>
+            <p> stuff </p>
+        </section>
+
         <section class="Game1">
             <article><h2>Game Design</h2>
                     <p>Check out this prototype game!</p>
                     <br>
                     <section>
-                    <section><img style ="border-radius: 5px;" src="game_demo.gif" alt="Game Demo" width="120" height="80"></img></section>
+                    <section><img style ="border-radius: 5px;" src="game_demo.gif" alt="Game Demo" scale="2"></img></section>
                     <img class="PlayButton" id="PlayButton" alt="Game" src="4bitPlayButton.png" onclick="startGame()"></img>
                     </section>
                     <br>
-
-                    
-                    
-
             </article>
-                            <!-- The Modal -->
-                            <div id="myModal" class="modal">
-
-                                <!-- The Close Button -->
-                                <span class="close">&times;</span>
-                        
-                                <!-- Modal Content (The Image) -->
-                                <canvas class ="Game" id="Game"></canvas>
-                        
-                                <!-- Modal Caption (Image Text) -->
-                                <div id="caption"></div>
-                            </div>
-                                <script src = "modal.js" type = "text/javascript"></script>
             <article><p>This first game is a asteroids type shooter/bullet hell</p></article>
         </section>
 
-
         <section class="Game2">
-            <article><p>This second game is a asteroids type shooter/bullet hell</p></article>
+            <article><p>This second game is a metroidvania hack and slash</p></article>
             <article><h2>Game Design</h2>
                     <p>Check out this prototype game!</p>
                     <br>
                     <section>
-                    <section><img style ="border-radius: 5px;" src="game_demo2.gif" alt="Game Demo" width="120" height="80"></img></section>
+                    <section><img style ="border-radius: 5px;" src="game_demo2.gif" alt="Game Demo" scale="2"></img></section>
                     <img class="PlayButton" id="PlayButton" alt="Game" src="4bitPlayButton.png" onclick="startGame()"></img>
                     </section>
                     <br>
-
-                    
-                    
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-
-                    <!-- The Close Button -->
-                    <span class="close">&times;</span>
-            
-                    <!-- Modal Content (The Image) -->
-                    <canvas class ="Game" id="Game"></canvas>
-            
-                    <!-- Modal Caption (Image Text) -->
-                    <div id="caption"></div>
-                </div>
-                    <script src = "modal.js" type = "text/javascript"></script>
-            </article>
-            
-        </section>
-
-        <section class = "aboutMe"><h3>About me!</h3>
-            <p> I ended up joining the military and after my contract was up, decided to 
-                pursue my career in software development. While I was in, I learned a-lot
-                about how computers, electronics, and heavy machines function as a Fire-Controlman (who doesn't like giant guns?). 
-                The things I like to do for fun are pretty simple, play games, 
-                watch anime and kinda of engineer my way out of problem I create for myself.
-                My hobbies include but are not limited to: illustrating, pixel art, 
-                tinkering and electronics repair (laptops and 
-                other PCBs), sleeping and eating fine foods.</p>
+                </article>
         </section>
     </main>
 
@@ -113,7 +70,18 @@
         <br>
     </footer>
 
+ <!-- The Modal -->
+ <div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <canvas class ="Game" id="Game"></canvas>
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+</div>
+
 </body>
+<script src = "modal.js" type = "text/javascript"></script>
 <script src = "game.js" type = "text/javascript"></script>
 <script src = "nav.js" type = "text/javascript"></script>
 </html>

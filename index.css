@@ -25,7 +25,7 @@ header {
   height: 180px;
   align-self: stretch;
   font-family: Helvetica;
-  background-color: turquoise;
+  background-color: #32e0c4;
   display: flex;
   justify-content: space-around;
   align-items: stretch;

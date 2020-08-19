@@ -1,7 +1,7 @@
 /* Basic styling */
 
 header nav {
-  background-color: turquoise;
+  background-color: #32e0c4;
   padding: 0px;
   width: 100%;
   display: flex;
@@ -49,7 +49,7 @@ header a {
 }
 
 .menu {
-  background-color: turquoise;
+  background-color: #32e0c4;
   display: flex;
   align-self: center;
   flex-wrap: nowrap;
@@ -58,14 +58,14 @@ header a {
 }
 
 .menu li a {
-  background-color: turquoise;
+  background-color: #32e0c4;
   display: block;
   padding: 15px;
-  border-color: lightblue;
+  border-color: #eeeeee;
 }
 
 .menu li.subitem a {
-  background-color: turquoise;
+  background-color: #32e0c4;
   padding: 15px;
 }
 
@@ -78,8 +78,9 @@ header a {
   order: 2;
 }
 
-.item :hover{
-  background-color: cadetblue;
+.item a:hover{
+  color: #eeeeee;
+  opacity: .5;
   border-radius: 5px;
 }
 
@@ -96,7 +97,7 @@ header a {
 
 .button.secondary {
   /* divider between buttons and menu links */
-  border-bottom: 1px #444 solid;
+  border-bottom: 1px #393e46;
 }
 
 /* Submenu up from mobile screens */
@@ -109,7 +110,7 @@ header a {
     flex-flow: row;
     position: absolute;
     border-top-style: solid;
-    background-color: turquoise;
+    background-color: 32e0c4;
 }
 
 .has-submenu i {
@@ -132,7 +133,7 @@ header a {
 }
 
 .submenu-active {
-  background-color:  turquoise;
+  background-color:  #32e0c4;
   border-radius: 3px;
 }
 
@@ -237,7 +238,7 @@ a:hover, a:active {
   .menu {
     width: 100%;
    flex-direction: column;
-    background-color: turquoise;
+    background-color: 32e0c4;
   }
   .logo {
       flex: 1;
