@@ -29,7 +29,6 @@ header {
   background-color: #32e0c4;
   display: flex;
   justify-content: space-around;
-  align-items: stretch;
 }
 
 main {
@@ -51,7 +50,9 @@ h1 {
   
 .HeroIMG{
   max-width:360px;
+  max-height:360px;
   border-radius: 420px;
+  margin-left: 75px;
 }
 
 p {
@@ -374,6 +375,10 @@ a:hover, a:active {
     display: flex;
   }
 
+  #aboutMe{
+    flex-direction: column-reverse;
+  }
+
   .GameDemo {
     border-radius: 5px;
     width:250px;
@@ -382,6 +387,7 @@ a:hover, a:active {
   .Game1{
   flex-direction: column;
   padding: 15px;
+  align-items: center;
   }
 
   .Game1 article{
@@ -391,6 +397,7 @@ a:hover, a:active {
   .Game2{
     flex-direction: column;
     padding: 15px;
+    align-items: center;
   }
   .Game2 article{
     padding: 15px;
