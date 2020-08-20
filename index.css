@@ -340,6 +340,10 @@ a:hover, a:active {
   body {
     justify-content: center;
     align-items: center;
+    min-width: 280px;
+  }
+  main {
+    width: 90%;
   }
 
   header nav {
@@ -385,29 +389,44 @@ a:hover, a:active {
   }
 
   .Game1{
-  flex-direction: column;
-  padding: 15px;
-  align-items: center;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    align-items: center;
+    
   }
 
   .Game1 article{
-    padding: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    align-self: baseline;
   }
 
   .Game2{
     flex-direction: column;
-    padding: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top:15px;
+    padding-bottom: 15px;
     align-items: center;
   }
   .Game2 article{
-    padding: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    align-self: baseline;
   }
 
   .aboutMe{
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 25px;
     text-overflow: clip;
     flex-wrap: wrap;
@@ -418,7 +437,6 @@ a:hover, a:active {
     line-height:26px; 
     padding-top: 50px;
     font-size: 19px;
-    margin-left: 25px;
     flex-direction: row;
   }
 
@@ -434,6 +452,14 @@ a:hover, a:active {
     flex-flow: column-reverse;
     align-self: center;
   }
+  .HeroIMG{
+    max-width:280px;
+    max-height:280px;
+    border-radius: 420px;
+    margin-left: 0px;
+    align-self: center;
+  }
+
 }
 /*    E N D    O F    R E S I Z E    S E C T I O N     */
 
