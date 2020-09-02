@@ -8,7 +8,7 @@
     <link rel ="stylesheet" href="index.css">
     <link rel ="stylesheet" href="glitch.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">   
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <header id="navbar">
         <nav>
         <li class="logo"><a href="#"><h1 class="glitch" data-text="MARK">MARK</h1> </a></li>
-        <ul class="menu">
+        <ul class="menuContainer"><ul class="menu">
             <li class="item"><a href="#">About</a></li>
             <li class="item"><a href="#">Message</a></li>
             <li class="item has-submenu" ><a tabindex="0" style="outline: none;">Links</a>
@@ -25,27 +25,31 @@
                     <li class="subitem"><a href="https://twitter.com/employee777" target="new">Twitter</a></li>
                     <li class="subitem"><a href="https://dev.to/employee777" target="new">Dev.to</a></li>
                     <li class="subitem"><a href="https://repl.it/@Employee777" target="new">Repl.it</a></li>
+                    <li class="subitem"><a href="https://codepen.io/employee777" target="new">Codepen</a></li>
                     <li class="subitem"><a href="https://www.therookies.co/employee777" target="new"></a></li>
                 </ul>
             </li>
-            <li class="item"> <label class="switch"><input type="checkbox" onclick="ChangeTheme()">
-                <span class="slider round"></span></li>
             <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-        </ul></nav>                   
+        </ul>  
+        <li class="Theme"> <label class="switch"><input type="checkbox" class="btn-toggle" onclick="ChangeTheme()">
+            <span class="slider round"></span></li></ul> 
+        </nav>              
     </header>
 
     <main>
+       
         <section class="aboutMe">
         <article><h2>Hello!</h2>
             <p>  I'm a Navy Veteran of 6 years, self proclaimed tinkerer, and I do nerd things. </p>
                 <br>
                 <section id="aboutMe"><article class="description"><p>While in the navy, I worked with
-                    computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant guns?). 
+                    computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant mech-like guns?). 
                     The things I like to do for fun are pretty simple, play games, 
                     watch anime and kinda of engineer my way out of problems.
                     My hobbies include, but not limited to: illustrating, cooking, 
                     DnD and electronics repair (laptops and 
-                    other PCBs), traveling, sleeping and eating fine foods.</p></article>
+                    other PCBs), traveling, sleeping and eating fine foods.</p>
+                </article>
                     <img class="HeroIMG" alt="HeroIMG" src="Workspace.jpg">
                 </section>
             </article>
@@ -63,25 +67,45 @@
             </article>
             <article class="description"><p>This is my first Javascript game, i was learning from a template provided from Frank Poth, off of his Repo on github, from that i developed this with alot of tweeking. I had quite a bit of un through it.</p></article>
         </section>
-<hr>
-        <section class="Game2">
-            <article><h2>Little Dude</h2>
-                    <p>A metroidvania hack and slash!</p>
-                    <br>
-                    <section>
-                    <section><img class="GameDemo" src="game_demo2.gif" alt="Game Demo"></img></section>
-                    <img class="PlayButton" id="PlayButton2" alt="Game" src="4bitPlayButton.png" onclick="startGame()"></img>
-                    </section>
-                    <br> 
-                </article>
-                <article class="description"><p>This second game was a little more challenging considering i was now loading more than one map and had to make enemy AI that functions properly and some basic physics. </p></article>
+
+<section class="aboutMe">
+    <article>
+            <br>
+            <section id="aboutMe"><article class="description">
+                <p>While working on this project, i have developed a better understanding of javascripts asynchronous frameworks an limitations.
+                computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant guns?). 
+                The things I like to do for fun are pretty simple, play games, 
+                watch anime and kinda of engineer my way out of problems.
+                My hobbies include, but not limited to: illustrating, cooking, 
+                DnD and electronics repair (laptops and 
+                other PCBs), traveling, sleeping and eating fine foods.</p>
+            </article>
+            </section>
+        </article>
+    </section>
+        <hr>
+        <br>
+        <section class="MsgContainer"> <h3>Message Me</h3>
+            <form action="https://formspree.io/mgenywgo" method="POST">
+                <br>
+                <label for="from" class="input-w">
+                  <span class="label"><h4>Email:</h4></span>
+                  <input type="text" name="_replyto" id="from" />
+                </label>
+                <br>
+                <label for="message" class="input-w">
+                  <span class="label"><h4>Message:</h4>
+                  <textarea type="text" name="message" id="message"></textarea>
+                </label>
+                <br>
+                <button type="submit" id="submit">  Send</button>
+              </form>
         </section>
     </main>
 
     <footer>
         <br>
-        <P>Pixel art will loop down here!</P>
-        <br>
+        <img class="footer" src="footer.gif" alt="footer">
     </footer>
 
  <!-- The Modal -->
@@ -97,4 +121,9 @@
 </body>
 <script src="index.js"></script>
 <script src="game.js"></script>
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  formbutton("create", {action: "https://formspree.io/mgenywgo"})
+</script>
 </html>

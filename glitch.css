@@ -12,10 +12,10 @@
   position: absolute;
   left: -2px;
   text-shadow: -3px 0 magenta;
-  background: #32e0c4;
+  background: var(--nav-color);
   overflow: hidden;
   top: 0;
-  animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  animation: noise-1 1.7s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
 }
 
 .glitch::after, .glow::after {
@@ -23,10 +23,10 @@
   position: absolute;
   left: 1px;
   text-shadow: -3px 0 lightgreen;
-  background: #32e0c4;
+  background: var(--nav-color);
   overflow: hidden;
   top: 0;
-  animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+  animation: noise-2 5s linear infinite alternate-reverse, glitch 5s 5s infinite;
 }
 
 @keyframes glitch {

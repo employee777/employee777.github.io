@@ -1,3 +1,7 @@
+
+
+/*                       M E N U                         */
+
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
 const items = document.querySelectorAll(".item");
@@ -28,15 +32,12 @@ function toggleItem() {
 /* Close Submenu From Anywhere */
 function closeSubmenu(e) {
   let isClickInside = menu.contains(e.target);
-
   if (!isClickInside && menu.querySelector(".submenu-active")) {
     menu.querySelector(".submenu-active").classList.remove("submenu-active");
   }
 }
 /* Event Listeners */
-
 document.addEventListener("click", closeSubmenu, true);
-
 toggle.addEventListener("click", toggleMenu, false);
 for (let item of items) {
   if (item.querySelector(".submenu")) {
@@ -46,12 +47,13 @@ for (let item of items) {
 }
 
 
-/*              N A V    B A R    S C R O L L                    */
+
+/*                 N A V    B A R    S C R O L L                    */
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollpos > currentScrollPos && currentScrollPos < 100) {
     document.getElementById("navbar").style.top = "0";
   } else {
     document.getElementById("navbar").style.top = "-150px";
@@ -60,30 +62,52 @@ window.onscroll = function() {
 }
 
 
-                // Get the modal
-                var modal = document.getElementById("myModal");
 
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img = document.getElementById("PlayButton");
-                var img = document.getElementById("PlayButton");
-                var modalImg = document.getElementById("Game");
-                var captionText = document.getElementById("caption");
-                img.onclick = function(){
-                  modal.style.display = "block";
-                  modalImg.src = this.src;
-                  captionText.innerHTML = this.alt;
-                }
-                
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
-                
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() {
-                  modal.style.display = "none";
-                }
-                
+/*            G A M E     W I N D O W            */
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("PlayButton");
+  var modalImg = document.getElementById("Game");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  } 
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
 
 
 
-               
-                
+/*                 Dark Theme                  */
+
+const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
+  }
+  localStorage.setItem("theme", theme);
+});

@@ -1,22 +1,17 @@
 /* Frank Poth 12/23/2017 */
 
 * {
-
   box-sizing:border-box;
   margin:0;
   padding:0;
-
 }
 
 html {
-
   height:100%;
   width:100%;
-
 }
 
 body {
-
   align-content:space-around;
   background-color:#202830;
   color:#ffffff;
@@ -27,5 +22,4 @@ body {
   justify-items:center;
   padding:0 8px;
   width:100%;
-
 }
