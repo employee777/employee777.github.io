@@ -190,6 +190,7 @@
   
   a:hover, a:active {
    opacity: 0.8;
+   text-decoration: underline;
   }
   
   /*         N A V   B A R         */
