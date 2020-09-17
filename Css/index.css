@@ -1,0 +1,275 @@
+/*
+
+
+     D A R K      T H E M E
+
+
+*/
+:root {
+  --text-color: #222;
+  --bkg-color: #eeeeee;
+  --brdr-color: #222;
+  --nav-color:rgb(50, 224, 196);
+  --navTxt-color:#222;
+  --main-color: 50, 224, 196;
+}
+
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #232B32;
+  --brdr-color: #f39121;
+  --nav-color:#f39121;
+  --navTxt-color:#222;
+  --main-color: 238, 238, 238;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  :root {
+    --text-color: #eee;
+    --bkg-color: #232B32;
+    --brdr-color: #f39121;
+    --nav-color:#f39121;
+    --navTxt-color:#222;
+    --main-color: 238, 238, 238;
+  }
+  
+  body.light-theme {
+    --text-color: #222;
+    --bkg-color: #eeeeee;
+    --brdr-color: #222;
+    --nav-color:#32e0c4;
+    --navTxt-color:#222;
+    --main-color: 50, 224, 196;;
+  } 
+}
+/*
+
+        Y E E T 
+
+*/
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  background:var(--bkg-color);
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display: block;
+  z-index: -1;
+}
+
+body {
+  margin: auto;
+  padding: auto;
+  min-width: 80%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  list-style-type: none;
+  overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;   
+  text-align: justify;
+  color:var(--text-color);
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 180px;
+  margin-top:25px;
+  align-self: stretch;
+  background-color: var(--nav-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+main {
+  position: relative;
+  max-width: 1160px;
+  margin-top: 250px;
+  align-self: center;
+  background-color:rgba(var(--main-color),.2);
+  border-radius: 15px;
+  padding: 5px;
+}
+
+h2, h3, h4, h5, h6, p {
+  color:var(--text-color);
+  margin-bottom:15px;
+  text-align: justify;
+}
+
+h1 {
+  margin: 0px;
+  color: var(--text-color);
+  font-family: 'IBM Plex Mono', monospace;
+}
+  
+.ShopIMG{
+  max-width:360px;
+  max-height:360px;
+  border-radius: 420px;
+  margin-left: 75px;
+  border-style: solid;
+  border-color:  var(--brdr-color);
+}
+
+.SelfIMG{
+  max-width:360px;
+  max-height:360px;
+  border-radius: 420px;
+  border-style: solid;
+  border-color:  var(--brdr-color);
+  width:150px; 
+  image-rendering:pixelated;
+  margin-left:25px;
+  margin-right:15px;
+}
+
+p {
+  font-family:Arial,Helvetica,sans-serif;
+  font-size: 20px;
+  display: flex;
+  color: var(--text-color);
+}
+
+.aboutMe{
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 25px;
+  text-overflow: clip;
+  flex-wrap: wrap;
+}
+
+.Game1{
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 25px;
+  text-overflow: clip;
+  image-rendering: pixelated;
+  }
+
+.aboutMe h2{
+  padding:42px;
+  font-size: 37px;
+}
+
+.aboutMe p{
+  text-align: justify;
+  line-height:26px; 
+  padding-top: 50px;
+  font-size: 19px;
+  margin-left: 25px;
+  flex-direction: row;
+}
+
+.description{
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  
+}
+
+.description h4{
+  margin-top:25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  text-align: left;
+}
+
+#GameModal {
+  width: 136px;
+  height: 48px;
+  position: relative;
+  top: 63px;
+  left: -194px;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+section{
+  display: flex;
+}
+
+.GameDemo {
+  border-radius: 5px;
+  width:250px;
+}
+
+.Game1 article{
+  padding: 15px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  bottom: 0px;
+  width: 100%;
+  align-self: center;
+  image-rendering: pixelated;
+  z-index: 1;
+  text-align: center;
+}
+
+img.footer{
+  bottom: 0px;
+  width: 50%;
+  align-self: center;
+}
+
+#copyright {
+  color:var(--text-color);
+  text-align: center;
+}
+
+#MessageMeModal{
+  position: fixed;
+  bottom:100px;
+  right:100px;
+}
+
+.MsgContainer{
+  width:100%;
+  padding: 25px;
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.MsgContainer form{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.MsgContainer form label.input-w{
+  display: flex;
+  justify-content: space-between;
+}
+
+textarea#message{
+  width:200px;
+  height:150px;  
+  text-emphasis: none;
+}

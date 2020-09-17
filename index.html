@@ -5,120 +5,136 @@
 <meta charset="UTF-8">
 <meta name ="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcus Helms</title>
-    <link rel ="stylesheet" href="index.css">
-    <link rel ="stylesheet" href="glitch.css">
+    <link rel ="stylesheet" href="Css/index.css">
+    <link rel ="stylesheet" href="Css/glitch.css">
+    <link rel ="stylesheet" href="Css/Resize.css">
+    <link rel ="stylesheet" href="Css/Nav.css">
+    <link rel ="stylesheet" href="Css/Modal.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <header id="navbar">
-        <nav>
-        <li class="logo"><a href="#"><h1 class="glitch" data-text="MARK">MARK</h1> </a></li>
-        <ul class="menuContainer"><ul class="menu">
-            <li class="item"><a href="#">About</a></li>
-            <li class="item"><a href="#">Message</a></li>
-            <li class="item has-submenu" ><a tabindex="0" style="outline: none;">Links</a>
-                <ul class="submenu">
-                    <li class="subitem"><a href="https://github.com/employee777/employee777" target="new">Github</a></li>
-                    <li class="subitem"><a href="https://twitter.com/employee777" target="new">Twitter</a></li>
-                    <li class="subitem"><a href="https://dev.to/employee777" target="new">Dev.to</a></li>
-                    <li class="subitem"><a href="https://repl.it/@Employee777" target="new">Repl.it</a></li>
-                    <li class="subitem"><a href="https://codepen.io/employee777" target="new">Codepen</a></li>
-                    <li class="subitem"><a href="https://www.therookies.co/employee777" target="new"></a></li>
-                </ul>
-            </li>
-            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-        </ul>  
-        <li class="Theme"> <label class="switch"><input type="checkbox" class="btn-toggle" onclick="ChangeTheme()">
-            <span class="slider round"></span></li></ul> 
-        </nav>              
-    </header>
-
-    <main>
-       
-        <section class="aboutMe">
-        <article><h2>Hello!</h2>
-            <p>  I'm a Navy Veteran of 6 years, self proclaimed tinkerer, and I do nerd things. </p>
-                <br>
-                <section id="aboutMe"><article class="description"><p>While in the navy, I worked with
-                    computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant mech-like guns?). 
-                    The things I like to do for fun are pretty simple, play games, 
-                    watch anime and kinda of engineer my way out of problems.
-                    My hobbies include, but not limited to: illustrating, cooking, 
-                    DnD and electronics repair (laptops and 
-                    other PCBs), traveling, sleeping and eating fine foods.</p>
-                </article>
-                    <img class="HeroIMG" alt="HeroIMG" src="Workspace.jpg">
-                </section>
-            </article>
-        </section>
-<hr>
-        <section class="Game1">
-            <article><h2>Space Man</h2>
-                    <p>An asteroids type shooter/bullet hell!</p>
-                    <br>
-                    <section>
-                    <section><img class="GameDemo" src="game_demo.gif" alt="Game Demo"></img></section>
-                    <img class="PlayButton" id="PlayButton" alt="Game" src="4bitPlayButton.png" onclick="startGame()"></img>
+                <header id="navbar">
+                    <nav>
+                    <li class="logo"><a href="#"><h1 class="glitch" data-text="MARK">MARK</h1> </a></li>
+                    <ul class="menuContainer"><ul class="menu">
+                        <li class="item"><a href="https://github.com/employee777/employee777" target="new">Github</a></li>
+                        <li class="item"><a href="https://twitter.com/employee777" target="new">Twitter</a></li>
+                        <li class="item"><a href="https://dev.to/employee777" target="new">Dev.to</a></li>
+                        <li class="item"><a href="https://repl.it/@Employee777" target="new">Repl.it</a></li>
+                        <li class="item"><a href="https://codepen.io/employee777" target="new">Codepen</a></li>
+                        <li class="item"><a href="https://www.therookies.co/employee777" target="new"></a></li>
+                        <li class="toggle"><a href="#"><i class="fas fa-link"></i></a></li>
+                    </ul>  
+                    <li class="Theme"> <label class="switch"><input type="checkbox" class="btn-toggle" onclick="ChangeTheme()">
+                        <span class="slider round"></span></li></ul> 
+                    </nav>              
+                </header>
+            <canvas id ="background" class="background"></canvas>
+                <main>
+                
+                    <section class="aboutMe">
+                    <article>
+                        
+                        <h2>Hello!</h2>
+                    
+                            <section id="aboutMe"><article class="description">
+                                <h4><img class="SelfIMG" src="Images/PixelSelf.png">I'm a Navy Veteran of 6 years, <br>self proclaimed tinkerer, <br>and I do nerd things. </h4>
+                                <p>While in the navy, I worked with
+                                computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant mech-like guns?). 
+                                The things I like to do for fun are pretty simple, play games, 
+                                watch anime and kinda of engineer my way out of problems.
+                                My hobbies include, but not limited to: illustrating, cooking, 
+                                DnD and electronics repair (laptops and 
+                                other PCBs), traveling, sleeping and good eats.</p>
+                            </article>
+                                <img class="ShopIMG" src="Images/Workspace.jpg">
+                            </section>
+                        </article>
                     </section>
+                  <hr>
+                  <br>
+                    <section class="Game1">
+                        <br>
+                        <article><h2>Space Man</h2>
+                                <p>An asteroids type shooter/bullet hell!</p>
+                                <br>
+                                <section>
+                                <section><img class="GameDemo" src="Images/game_demo.gif" alt="Game Demo"></img></section>
+                                <img id="GameModal" src="Images/4bitPlayButton.png" onclick='modal(this)'></img>
+                                </section>
+                                <br>
+                        </article>
+                        <article class="description"><p>While working on this project, i have developed a better understanding of javascripts asynchronous frameworks an limitations.
+                            computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant guns?). 
+                            The things I like to do for fun are pretty simple, play games, 
+                            watch anime and kinda of engineer my way out of problems.
+                            My hobbies include, but not limited to: illustrating, cooking, 
+                            DnD and electronics repair (laptops and 
+                            other PCBs), traveling, sleeping and eating fine foods.</p></article>
+                    </section>
+
+            <section class="aboutMe">
+                <article>
+                        <section id="aboutMe"><article class="description">
+                            <p>While working on this project, i have developed a better understanding of javascripts asynchronous frameworks an limitations.
+                            computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant guns?). 
+                            The things I like to do for fun are pretty simple, play games, 
+                            watch anime and kinda of engineer my way out of problems.
+                            My hobbies include, but not limited to: illustrating, cooking, 
+                            DnD and electronics repair (laptops and 
+                            other PCBs), traveling, sleeping and eating fine foods.</p>
+                        </article>
+                        </section>
+                    </article>
+                </section>
                     <br>
-            </article>
-            <article class="description"><p>This is my first Javascript game, i was learning from a template provided from Frank Poth, off of his Repo on github, from that i developed this with alot of tweeking. I had quite a bit of un through it.</p></article>
-        </section>
+                    
+                </main>
 
-<section class="aboutMe">
-    <article>
-            <br>
-            <section id="aboutMe"><article class="description">
-                <p>While working on this project, i have developed a better understanding of javascripts asynchronous frameworks an limitations.
-                computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant guns?). 
-                The things I like to do for fun are pretty simple, play games, 
-                watch anime and kinda of engineer my way out of problems.
-                My hobbies include, but not limited to: illustrating, cooking, 
-                DnD and electronics repair (laptops and 
-                other PCBs), traveling, sleeping and eating fine foods.</p>
-            </article>
-            </section>
-        </article>
-    </section>
-        <hr>
-        <br>
-        <section class="MsgContainer"> <h3>Message Me</h3>
-            <form action="https://formspree.io/mgenywgo" method="POST">
-                <br>
-                <label for="from" class="input-w">
-                  <span class="label"><h4>Email:</h4></span>
-                  <input type="text" name="_replyto" id="from" />
-                </label>
-                <br>
-                <label for="message" class="input-w">
-                  <span class="label"><h4>Message:</h4>
-                  <textarea type="text" name="message" id="message"></textarea>
-                </label>
-                <br>
-                <button type="submit" id="submit">  Send</button>
-              </form>
-        </section>
-    </main>
+                <img id="MessageMeModal" src="Images/4bitPlayButton.png" onclick='modal(this)'></img>
 
-    <footer>
-        <br>
-        <img class="footer" src="footer.gif" alt="footer">
-    </footer>
+                <footer>
+                    <br>
+                    <img class="footer" src="Images/footer.gif" alt="footer">
+                    <h6 id ="copyright"></h6>
+                </footer>
 
- <!-- The Modal -->
- <section id="myModal" class="modal">
-    <!-- The Close Button -->
-    <span class="close">&times;</span>
-    <!-- Modal Content (The Image) -->
-    <canvas class ="Game" id="Game"></canvas>
-    <!-- Modal Caption (Image Text) -->
-    <div id="caption"></div>
-</section>
+            <!--         P O P    U P S    S E C T I O N         -->
 
-</body>
+            <!-- The Game Modal -->
+            <div id="Game" class="modal">
+            <div class="modal-content" >
+                <span class="close">&times;</span>
+                <iframe  frameborder="0" src="https://itch.io/embed-upload/2697732?color=333333" allowfullscreen="" width="980" height="688"><a href="https://employee777.itch.io/zeromarz">Play ProtoZero on itch.io</a></iframe>
+            </div>
+        </div>
+            <!-- The Message Modal -->
+            <div id="MessageMe" class="modal">
+            <div class="modal-content" >
+                <span class="close">&times;</span>
+                <h3>Message Me</h3>
+                    <form action="https://formspree.io/mgenywgo" method="POST">
+                        <br>
+                        <label for="from" class="input-w">
+                        <span class="label"><h4>Email:</h4></span>
+                        <br>
+                        <input type="text" name="_replyto" id="from" />
+                        </label>
+                        <br>
+                        <label for="message" class="input-w">
+                        <span class="label"><h4>Message:</h4>
+                            <br>
+                        <textarea type="text" name="message" id="message"></textarea>
+                        </label>
+                        <br>
+                        <button type="submit" id="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+
+    </body>
 <script src="index.js"></script>
-<script src="game.js"></script>
 </html>

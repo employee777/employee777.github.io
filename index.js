@@ -10,7 +10,7 @@ const items = document.querySelectorAll(".item");
 function toggleMenu() {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
-    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-link'></i>";
   } else {
     menu.classList.add("active");
     toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
@@ -36,6 +36,7 @@ function closeSubmenu(e) {
     menu.querySelector(".submenu-active").classList.remove("submenu-active");
   }
 }
+
 /* Event Listeners */
 document.addEventListener("click", closeSubmenu, true);
 toggle.addEventListener("click", toggleMenu, false);
@@ -45,7 +46,7 @@ for (let item of items) {
   }
   item.addEventListener("keypress", toggleItem, false);
 }
-
+/*                   E N D   O F   M E N U                      */
 
 
 /*                 N A V    B A R    S C R O L L                    */
@@ -53,35 +54,19 @@ for (let item of items) {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos && currentScrollPos < 100) {
-    document.getElementById("navbar").style.top = "0";
+  if (prevScrollpos > currentScrollPos && currentScrollPos < 150) {
+    document.getElementById("navbar").style.top = "0px";
   } else {
-    document.getElementById("navbar").style.top = "-150px";
+    document.getElementById("navbar").style.top = "-175px";
   }
   prevScrollpos = currentScrollPos;
 }
 
 
 
-/*            G A M E     W I N D O W            */
 
-  // Get the modal
-  var modal = document.getElementById("myModal");
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var img = document.getElementById("PlayButton");
-  var modalImg = document.getElementById("Game");
-  var captionText = document.getElementById("caption");
-  img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  } 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
+
+
 
 
 
@@ -111,3 +96,54 @@ btn.addEventListener("click", function () {
   }
   localStorage.setItem("theme", theme);
 });
+
+
+
+//Copyright//
+const date_ob = new Date();
+const Year = date_ob.getFullYear();
+const Copyright = document.getElementById("copyright"); 
+copyright = document.write(" Copyright "+" &copy; "+ " " + `${Year}` + " " + "Marcus Helms "+". All Rights Reserved");
+
+/*            Modal           */
+
+// GAME
+
+var ModalGame = document.getElementById("Game");
+// Get the button that opens the modal
+var GameBtn = document.getElementById("GameModal");
+// When the user clicks on the button, open the modal
+GameBtn.onclick = function() {
+  ModalGame.style.display = "block";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = (event) => {
+  if (event.target === ModalGame) {
+    ModalGame.style.display = "none";
+  }
+}
+
+// MESSAGE
+
+var ModalMessageMe = document.getElementById("MessageMe");
+// Get the button that opens the modal
+var MessageBtn = document.getElementById("MessageMeModal");
+// When the user clicks on the button, open the modal
+MessageBtn.onclick = function() {
+  ModalMessageMe.style.display = "block";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target === ModalMessageMe) {
+    ModalMessageMe.style.display = "none";
+  }
+}
+
+// CLOSE
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  (ModalGame.style.display = "none") || (ModalMessageMe.style.display = "none");
+}
