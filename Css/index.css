@@ -65,6 +65,7 @@ body.dark-theme {
   left:0;
   display: block;
   z-index: -1;
+  image-rendering:pixelated;
 }
 
 body {
@@ -224,6 +225,7 @@ section{
 footer {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
   bottom: 0px;
   width: 100%;
   align-self: center;
@@ -241,6 +243,9 @@ img.footer{
 #copyright {
   color:var(--text-color);
   text-align: center;
+  margin-bottom: 15px;
+  align-self: center;
+  padding-bottom: 15px;
 }
 
 #MessageMeModal{

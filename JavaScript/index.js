@@ -63,16 +63,9 @@ window.onscroll = function() {
 }
 
 
-
-
-
-
-
-
-
 /*                 Dark Theme                  */
 
-const btn = document.querySelector(".btn-toggle");
+const btn = document.querySelector(".Theme-Btn");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const currentTheme = localStorage.getItem("theme");
@@ -102,48 +95,5 @@ btn.addEventListener("click", function () {
 //Copyright//
 const date_ob = new Date();
 const Year = date_ob.getFullYear();
-const Copyright = document.getElementById("copyright"); 
-copyright = document.write(" Copyright "+" &copy; "+ " " + `${Year}` + " " + "Marcus Helms "+". All Rights Reserved");
+document.getElementById("copyright").innerHTML = (" Copyright "+" &copy; "+ " " + `${Year}` + " " + "Marcus Helms "+". All Rights Reserved");
 
-/*            Modal           */
-
-// GAME
-
-var ModalGame = document.getElementById("Game");
-// Get the button that opens the modal
-var GameBtn = document.getElementById("GameModal");
-// When the user clicks on the button, open the modal
-GameBtn.onclick = function() {
-  ModalGame.style.display = "block";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = (event) => {
-  if (event.target === ModalGame) {
-    ModalGame.style.display = "none";
-  }
-}
-
-// MESSAGE
-
-var ModalMessageMe = document.getElementById("MessageMe");
-// Get the button that opens the modal
-var MessageBtn = document.getElementById("MessageMeModal");
-// When the user clicks on the button, open the modal
-MessageBtn.onclick = function() {
-  ModalMessageMe.style.display = "block";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target === ModalMessageMe) {
-    ModalMessageMe.style.display = "none";
-  }
-}
-
-// CLOSE
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  (ModalGame.style.display = "none") || (ModalMessageMe.style.display = "none");
-}
