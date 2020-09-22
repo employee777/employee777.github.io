@@ -9,11 +9,10 @@
   --text-color: #222;
   --bkg-color: #eeeeee;
   --brdr-color: #222;
-  --nav-color:rgb(50, 224, 196);
+  --nav-color:#32e0c4;
   --navTxt-color:#222;
-  --main-color: 50, 224, 196;
+  --main-color: 238, 238, 238;
 }
-
 body.dark-theme {
   --text-color: #eee;
   --bkg-color: #232B32;
@@ -22,8 +21,6 @@ body.dark-theme {
   --navTxt-color:#222;
   --main-color: 238, 238, 238;
 }
-
-
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
   :root {
@@ -41,7 +38,7 @@ body.dark-theme {
     --brdr-color: #222;
     --nav-color:#32e0c4;
     --navTxt-color:#222;
-    --main-color: 50, 224, 196;;
+    --main-color: 238, 238, 238;
   } 
 }
 /*
@@ -50,12 +47,15 @@ body.dark-theme {
 
 */
 * {
-  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
 }
-
+:root{
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Input Mono', monospace;
+}
 .background {
   background:var(--bkg-color);
   width:100%;
@@ -66,8 +66,8 @@ body.dark-theme {
   display: block;
   z-index: -1;
   image-rendering:pixelated;
+  transition: .5s;
 }
-
 body {
   margin: auto;
   padding: auto;
@@ -80,46 +80,82 @@ body {
   align-content: space-around;
   list-style-type: none;
   overflow: auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Input Mono', monospace;
   font-size: 16px;   
   text-align: justify;
   color:var(--text-color);
 }
-
 header {
   position: fixed;
-  z-index: 2;
+  top:0px;
+  z-index: 1;
   width: 100%;
   height: 180px;
   margin-top:25px;
   align-self: stretch;
   background-color: var(--nav-color);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  flex-flow: row;
+  align-items: center;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 5px;
+    flex-flow: row;
 }
 
-main {
-  position: relative;
-  max-width: 1160px;
-  margin-top: 250px;
-  align-self: center;
-  background-color:rgba(var(--main-color),.2);
-  border-radius: 15px;
-  padding: 5px;
+#navbar{
+  transition: .5s;
+}
+
+#navbar > nav > ul {
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+}
+#navbar > nav > ul > ul{
+  display: flex;
+  flex-flow: row-reverse;
+}
+#navbar > nav > ul > ul > li{
+  margin-right: 15px;
+  flex-flow: row-reverse;
+  text-decoration: underline;
+  list-style: none;
+}
+.logo {
+  padding: 7.5px 10px 7.5px 0;
+}
+.Theme-BTN{
+  width: 37px;
+  height: 37px;
+  background-color:rgb(var(--main-color));
+  border-radius: 50%;
+  margin: 15px;
+  border: none;
+  transition: 1s;
+}
+
+.link{
+  display: none;
 }
 
 h2, h3, h4, h5, h6, p {
   color:var(--text-color);
-  margin-bottom:15px;
+  margin:15px;
   text-align: justify;
 }
-
 h1 {
   margin: 0px;
+  font-size: 36px;
   color: var(--text-color);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Input Mono', monospace;
 }
-  
 .ShopIMG{
   max-width:360px;
   max-height:360px;
@@ -128,100 +164,58 @@ h1 {
   border-style: solid;
   border-color:  var(--brdr-color);
 }
-
 .SelfIMG{
-  max-width:360px;
-  max-height:360px;
-  border-radius: 420px;
+  min-width:150px;
+  max-height:150px;
+  border-radius: 75px;
   border-style: solid;
   border-color:  var(--brdr-color);
-  width:150px; 
   image-rendering:pixelated;
-  margin-left:25px;
-  margin-right:15px;
+  margin-right:25px;
+  
 }
-
+.GameDemo{
+  margin: 25px;
+  min-width:320px;
+  max-height:320px;
+  image-rendering:pixelated;
+}
 p {
-  font-family:Arial,Helvetica,sans-serif;
   font-size: 20px;
   display: flex;
   color: var(--text-color);
+  margin:25px;
 }
-
-.aboutMe{
-  display: flex;
-  flex-direction: row;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 25px;
-  text-overflow: clip;
-  flex-wrap: wrap;
-}
-
-.Game1{
-  display: flex;
-  flex-direction: row;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 25px;
-  text-overflow: clip;
-  image-rendering: pixelated;
-  }
-
-.aboutMe h2{
-  padding:42px;
-  font-size: 37px;
-}
-
-.aboutMe p{
-  text-align: justify;
-  line-height:26px; 
-  padding-top: 50px;
-  font-size: 19px;
-  margin-left: 25px;
-  flex-direction: row;
-}
-
-.description{
-  display: flex;
+main {
+  position: relative;
+  max-width: 1160px;
+  margin-top: 250px;
   align-self: center;
+  background-color:rgba(var(--main-color),.2);
+  border-radius: 15px;
+  padding: 5px;
+  display: flex;
   flex-direction: column;
-  
 }
-
-.description h4{
-  margin-top:25px;
+.aboutMe section{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  font-size: 20px;
   text-align: left;
 }
-
-#GameModal {
-  width: 136px;
-  height: 48px;
-  position: relative;
-  top: 63px;
-  left: -194px;
-  cursor: pointer;
-  image-rendering: pixelated;
-}
-
-section{
+.aboutMe article{
   display: flex;
+  flex-direction: column;
 }
-
-.GameDemo {
-  border-radius: 5px;
-  width:250px;
+.aboutMe article h1{
+  margin-bottom:-45px;
+  margin-left:188px;
+  text-align: left;
 }
-
-.Game1 article{
-  padding: 15px;
+.aboutMe article h4{
+  display: flex;
+  align-items: top;
 }
-
 footer {
   display: flex;
   flex-direction: column;
@@ -233,13 +227,11 @@ footer {
   z-index: 1;
   text-align: center;
 }
-
 img.footer{
   bottom: 0px;
   width: 50%;
   align-self: center;
 }
-
 #copyright {
   color:var(--text-color);
   text-align: center;
@@ -247,35 +239,19 @@ img.footer{
   align-self: center;
   padding-bottom: 15px;
 }
-
-#MessageMeModal{
+#MessageMeModal {
   position: fixed;
-  bottom:100px;
-  right:100px;
-  z-index: 2;
+  bottom: 50px;
+  right: 50px;
 }
 
-.MsgContainer{
-  width:100%;
-  padding: 25px;
-  display: none;
-  flex-direction: column;
-  align-self: center;
-  justify-content: space-between;
-}
-
-.MsgContainer form{
+.Game{
   display: flex;
-  flex-direction: column;
-  align-self: center;
-}
-.MsgContainer form label.input-w{
-  display: flex;
-  justify-content: space-between;
+  flex-direction: row;
 }
 
-textarea#message{
-  width:200px;
-  height:150px;  
-  text-emphasis: none;
+.description {
+  align-items: bottom;
+  justify-content: end;
+  text-align: left;
 }

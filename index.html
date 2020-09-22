@@ -12,96 +12,101 @@
     <link rel ="stylesheet" href="Css/Modal.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">   
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
-                <header id="navbar">
-                    <nav>
-                    <li class="logo"><a href="#"><h1 class="glitch" data-text="MARK">MARK</h1> </a></li>
-                    <ul class="menuContainer"><ul class="menu">
-                        <li class="item"><a href="https://github.com/employee777/employee777" target="new">Github</a></li>
-                        <li class="item"><a href="https://twitter.com/employee777" target="new">Twitter</a></li>
-                        <li class="item"><a href="https://dev.to/employee777" target="new">Dev.to</a></li>
-                        <li class="item"><a href="https://repl.it/@Employee777" target="new">Repl.it</a></li>
-                        <li class="item"><a href="https://codepen.io/employee777" target="new">Codepen</a></li>
-                        <li class="item"><a href="https://www.therookies.co/employee777" target="new"></a></li>
-                        <li class="toggle"><a href="#"><i class="fas fa-link"></i></a></li>
-                    </ul>  
-                    <li class="Theme"> <label class="switch"><input type="checkbox" class="Theme-Btn" onclick="ChangeTheme()">
-                        <span class="slider round"></span></li></ul> 
-                    </nav>              
-                </header>
-            <canvas id ="background" class="background"></canvas>
-                <main>
-                    <section class="aboutMe">
-                    <article>
-                        <h2>Hello!</h2>
-                            <section id="aboutMe"><article class="description">
-                                <h4><img class="SelfIMG" src="Images/PixelSelf.png">I'm a Navy Veteran of 6 years, <br>self proclaimed tinkerer, <br>and I do nerd things. </h4>
-                                <p>While in the navy, I worked with
-                                computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant mech-like guns?). 
-                                The things I like to do for fun are pretty simple, play games, 
-                                watch anime and kinda of engineer my way out of problems.
-                                My hobbies include, but not limited to: illustrating, cooking, 
-                                DnD and electronics repair (laptops and 
-                                other PCBs), traveling, sleeping and good eats.</p>
-                            </article>
-                                <img class="ShopIMG" src="Images/Workspace.jpg">
-                            </section>
-                        </article>
-                    </section>
-                  <hr>
+    <canvas id ="background" class="background"></canvas>
+    <header id="navbar">
+        <h1 class="glitch" data-text="MARK">MARK</h1>
+        <nav>
+            <ul class="menuContainer">
+                <button class="Theme-BTN"></button>
+                    <ul class="fas fa-link" onclick ="toggleMenu()">
+                        <li class="link"><a href="https://github.com/employee777/employee777" target="new">Github</a></li>
+                        <li class="link"><a href="https://twitter.com/employee777" target="new">Twitter</a></li>
+                        <li class="link"><a href="https://dev.to/employee777" target="new">Dev.to</a></li>
+                        <li class="link"><a href="https://repl.it/@Employee777" target="new">Repl.it</a></li>
+                        <li class="link"><a href="https://codepen.io/employee777" target="new">Codepen</a></li>
+                    </ul>
+            </ul>     
+        </nav>                 
+    </header>
+            
+    <main>        
+        <section class="aboutMe">
+                            
+            
+                             
+            <section id="description">  
+                <article >   <h1>Hello!</h1>
+                <h4><img class="SelfIMG" src="Images/PixelSelf.png"><br><br><br>
+                    I'm a USN Veteran, <br>Engineer, <br>and I do nerd things. </h4>         
+            
+         
+                   
+                <p>While in the navy, I worked with
+                    computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant mech-like guns?). 
+                    The things I like to do for fun are pretty simple, play games, 
+                    watch anime and kinda of engineer my way out of problems.       
+                    My hobbies include, but not limited to: illustrating, cooking, 
+                    DnD and electronics repair (laptops and   
+                    other PCBs), traveling, sleeping and good eats.       
+                </p>
+            </article>
+            <img class="ShopIMG" src="Images/Workspace.jpg">
+        </section>
+        </section>
+
+        <hr>
                 
-                    <section class="Game1">
-                       
-                        <article><h2>Space Man</h2>
-                                <p>An asteroids type shooter/bullet hell!</p>
-                                
-                                <section>
-                                <section><img class="GameDemo" src="Images/game_demo.gif" alt="Game Demo"></img></section>
-                                <img id="GameModal" src="Images/4bitPlayButton.png" onclick='modal(this)'></img>
-                                </section>
-                               
-                        </article>
-                        <article class="description"><p>While working on this project, i have developed a better understanding of javascripts asynchronous frameworks an limitations.
-                            computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant guns?). 
-                            The things I like to do for fun are pretty simple, play games, 
-                            watch anime and kinda of engineer my way out of problems.
-                            My hobbies include, but not limited to: illustrating, cooking, 
-                            DnD and electronics repair (laptops and 
-                            other PCBs), traveling, sleeping and eating fine foods.</p></article>
-                    </section>
+        <section class="Game">
+            <article><h2>Space Man</h2>
+                <p>An asteroids type shooter/bullet hell!</p>    
+                <span><img class="GameDemo" src="Images/game_demo.gif" alt="Game Demo"></img></span>
+                <img id="GameModal" src="Images/4bitPlayButton.png" onclick='modal(this)'></img>      
+            </article>
+                        
+            <article class="description"><p>While working on this project, i have developed a better understanding of javascripts asynchronous frameworks an limitations.
+                computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant guns?). 
+                The things I like to do for fun are pretty simple, play games,         
+                watch anime and kinda of engineer my way out of problems.
+                My hobbies include, but not limited to: illustrating, cooking, 
+                DnD and electronics repair (laptops and     
+                other PCBs), traveling, sleeping and eating fine foods.</p></article>
+            </section>
+                
             <section class="aboutMe">
-                <article>
-                        <section id="aboutMe"><article class="description">
-                            <p>While working on this project, i have developed a better understanding of javascripts asynchronous frameworks an limitations.
-                            computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant guns?). 
-                            The things I like to do for fun are pretty simple, play games, 
-                            watch anime and kinda of engineer my way out of problems.
-                            My hobbies include, but not limited to: illustrating, cooking, 
-                            DnD and electronics repair (laptops and 
-                            other PCBs), traveling, sleeping and eating fine foods.</p>
-                        </article>
-                        </section>
-                    </article>
-                </section>
+                <h2>Hello!</h2>
+                <article >         
+                    <p>While in the navy, I worked with   
+                        computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant mech-like guns?). 
+                        The things I like to do for fun are pretty simple, play games, 
+                        watch anime and kinda of engineer my way out of problems.       
+                        My hobbies include, but not limited to: illustrating, cooking, 
+                        DnD and electronics repair (laptops and 
+                        other PCBs), traveling, sleeping and good eats.          
+                    </p>    
+                </article>  
+            </section>
                 
-                </main>
+            <img id="MessageMeModal" src="Images/4bitPlayButton.png" onclick='modal(this)'></img>
+        </main>
                
-                    <img id="MessageMeModal" src="Images/4bitPlayButton.png" onclick='modal()'></img>
-                
-                <footer>
-                    <img class="footer" src="Images/footer.gif" alt="footer">
-                    
-                    <h6 id ="copyright"></h6>
-                </footer>
-                
- <!--         P O P    U P S    S E C T I O N         -->
+        <footer>
+            <h6 id ="copyright"></h6>
+
+            <script>
+                const date_ob = new Date(); 
+                const Year = date_ob.getFullYear();
+                    document.getElementById("copyright").innerHTML = (" Copyright "+" &copy; "+ " " + `${Year}` + " " + "Marcus Helms "+". All Rights Reserved");
+            </script>
+        </footer>
+         
+        <!--         P O P    U P S    S E C T I O N         -->
 
         <!-- The Game Modal -->
            
-            <div id="Game" class="modal">
+        <div id="Game" class="modal">
             <div class="modal-content" >
                 <span class="close">&times;</span>
                 <iframe  frameborder="0" src="https://itch.io/embed-upload/2697732?color=333333" allowfullscreen="" width="980" height="688"><a href="https://employee777.itch.io/zeromarz">Play ProtoZero on itch.io</a></iframe>
@@ -132,6 +137,7 @@
                     </form>
                 </div>
             </div>
+
 
     </body>
 <script src="JavaScript/index.js"></script>

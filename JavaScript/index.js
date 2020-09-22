@@ -17,35 +17,18 @@ function toggleMenu() {
   }
 }
 
-/* Activate Submenu */
-function toggleItem() {
-  if (this.classList.contains("submenu-active")) {
-    this.classList.remove("submenu-active");
-  } else if (menu.querySelector(".submenu-active")) {
-    menu.querySelector(".submenu-active").classList.remove("submenu-active");
-    this.classList.add("submenu-active");
+function toggleMenu() {
+  var x = document.getElementsByClassName("link");
+  if (x.style.display === "none") {
+    x.style.display = "block";
   } else {
-    this.classList.add("submenu-active");
+    x.style.display = "none";
   }
 }
-
 /* Close Submenu From Anywhere */
-function closeSubmenu(e) {
-  let isClickInside = menu.contains(e.target);
-  if (!isClickInside && menu.querySelector(".submenu-active")) {
-    menu.querySelector(".submenu-active").classList.remove("submenu-active");
-  }
-}
+
 
 /* Event Listeners */
-document.addEventListener("click", closeSubmenu, true);
-toggle.addEventListener("click", toggleMenu, false);
-for (let item of items) {
-  if (item.querySelector(".submenu")) {
-    item.addEventListener("click", toggleItem, false);
-  }
-  item.addEventListener("keypress", toggleItem, false);
-}
 /*                   E N D   O F   M E N U                      */
 
 
@@ -65,7 +48,7 @@ window.onscroll = function() {
 
 /*                 Dark Theme                  */
 
-const btn = document.querySelector(".Theme-Btn");
+const btn = document.querySelector(".Theme-BTN");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const currentTheme = localStorage.getItem("theme");
@@ -89,11 +72,3 @@ btn.addEventListener("click", function () {
   }
   localStorage.setItem("theme", theme);
 });
-
-
-
-//Copyright//
-const date_ob = new Date();
-const Year = date_ob.getFullYear();
-document.getElementById("copyright").innerHTML = (" Copyright "+" &copy; "+ " " + `${Year}` + " " + "Marcus Helms "+". All Rights Reserved");
-

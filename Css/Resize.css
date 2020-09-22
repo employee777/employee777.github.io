@@ -1,4 +1,3 @@
-/*           R E S I Z E       S E C T I O N             */
 
 /* Tablet menu */
 @media all and (max-width: 959px) {
@@ -12,52 +11,6 @@
       width: 90%;
     }
   
-    header nav {
-      margin:0px;
-    }
-  
-    .menu {
-      width: 100%;
-     flex-direction: column;
-      background-color: 32e0c4;
-    }
-    .logo {
-        flex: 1;
-        height: 150px;
-    }
-    .toggle {
-        flex: 1;
-        text-align: right;
-        order: 2;
-    }
-  
-    .menuContainer {
-      width: 100%;
-      background-color:  var(--nav-color);
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
-    }
-    
-    .switch {
-      top:5px;
-      position: relative;
-      display: flex;
-      align-self: center;
-      width: 60px;
-      height: 34px;
-    }
-  
-    .submenu-active .submenu {
-      display: block;
-      width: 100%;
-      flex-flow: row;
-      position: inherit;
-    }
-  
-  
-  /*                 E N D   O F   N A V I G A T I O N                 */
-  
     section{
       display: flex;
     }
@@ -65,70 +18,6 @@
     #aboutMe{
       flex-direction: column-reverse;
     }
-  
-    .GameDemo {
-      border-radius: 5px;
-      width:250px;
-    }
-  
-    .Game1{
-      flex-direction: column;
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-top:15px;
-      padding-bottom: 15px;
-      align-items: center;
-      
-    }
-  
-    .Game1 article{
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-top:15px;
-      padding-bottom: 15px;
-      align-self: baseline;
-    }
-  
-    .Game2{
-      flex-direction: column;
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-top:15px;
-      padding-bottom: 15px;
-      align-items: center;
-    }
-    .Game2 article{
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-top:15px;
-      padding-bottom: 15px;
-      align-self: baseline;
-    }
-  
-    .aboutMe{
-      display: flex;
-      flex-direction: column;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-bottom: 25px;
-      text-overflow: clip;
-      flex-wrap: wrap;
-    }
-  
-    .aboutMe p{
-      text-align: justify;
-      line-height:26px; 
-      padding-top: 50px;
-      font-size: 19px;
-      flex-direction: row;
-    }
-  
-    .description{
-      display: flex;
-      align-self: center;
-      justify-content: center;
-    }
-  
   
     .HeroIMG{
       max-width:280px;
@@ -139,5 +28,3 @@
     }
   
   }
-  /*    E N D    O F    R E S I Z E    S E C T I O N     */
-  
