@@ -1,18 +1,20 @@
 
 .glitch, .glow {
   top: auto ;
+  padding-left: 3px;
   min-width: 100px;
   color: black;
   position: relative;
-  font-size: 114px;
+  font-size: 100px;
   animation: glitch 5s 5s infinite;
 }
 
 .glitch::before, .glow::before {
   content: attr(data-text);
   position: absolute;
-  left: -2px;
-  text-shadow: -2px 0 magenta;
+  padding-left: 4px;
+  left: 1px;
+  text-shadow: 2px 0 magenta;
   background: var(--nav-color);
   overflow: hidden;
   top: 0;
@@ -22,8 +24,9 @@
 .glitch::after, .glow::after {
   content: attr(data-text);
   position: absolute;
+  padding-left: 2px;
   left: 1px;
-  text-shadow: -3px 0 lightgreen;
+  text-shadow: 3px 0 lightgreen;
   background: var(--nav-color);
   overflow: hidden;
   top: 0;
@@ -32,7 +35,7 @@
 
 @keyframes glitch {
   1% {
-    transform: rotateX(10deg) skewX(45deg);
+    transform: rotateX(45deg) skewX(83deg);
   }
   2% {
     transform: rotateX(0deg) skewX(0deg);

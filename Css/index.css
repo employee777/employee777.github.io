@@ -66,7 +66,6 @@ body.dark-theme {
   display: block;
   z-index: -1;
   image-rendering:pixelated;
-  transition: .5s;
 }
 body {
   margin: auto;
@@ -110,7 +109,7 @@ nav {
 }
 
 #navbar{
-  transition: .5s;
+  transition: top .5s;
 }
 
 #navbar > nav > ul {
@@ -138,38 +137,38 @@ nav {
   border-radius: 50%;
   margin: 15px;
   border: none;
-  transition: 1s;
 }
-
-.link{
-  display: none;
-}
-
 h2, h3, h4, h5, h6, p {
   color:var(--text-color);
   margin:15px;
   text-align: justify;
+  font-family: 'Input Mono', monospace;
 }
+
 h1 {
   margin: 0px;
-  font-size: 36px;
+  margin-left:25px;
+  padding-left: 3px;
+  font-size: 28px;
   color: var(--text-color);
-  font-family: 'Input Mono', monospace;
+  font-family: 'Press Start 2P', cursive;
 }
 .ShopIMG{
   max-width:360px;
   max-height:360px;
   border-radius: 420px;
-  margin-left: 75px;
+  margin-left: 50px;
+  margin-right: 25px;
+
   border-style: solid;
-  border-color:  var(--brdr-color);
+  border-color: var(--brdr-color);
 }
 .SelfIMG{
   min-width:150px;
   max-height:150px;
   border-radius: 75px;
   border-style: solid;
-  border-color:  var(--brdr-color);
+  border-color: var(--brdr-color);
   image-rendering:pixelated;
   margin-right:25px;
   
@@ -179,14 +178,19 @@ h1 {
   min-width:320px;
   max-height:320px;
   image-rendering:pixelated;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: var(--brdr-color);
 }
 p {
   font-size: 20px;
   display: flex;
   color: var(--text-color);
   margin:25px;
+  font-family: 'Input Mono', monospace;
 }
 main {
+  
   position: relative;
   max-width: 1160px;
   margin-top: 250px;
@@ -197,6 +201,10 @@ main {
   display: flex;
   flex-direction: column;
 }
+.aboutMe{
+  padding-top: 50px;
+}
+
 .aboutMe section{
   display: flex;
   flex-direction: row;
@@ -216,6 +224,16 @@ main {
   display: flex;
   align-items: top;
 }
+
+.aboutMe article li{
+  display: flex;
+  margin-left: 50px;
+  list-style: none;
+  color:var(--text-color);
+  font-family: 'Input Mono', monospace;
+}
+
+
 footer {
   display: flex;
   flex-direction: column;
@@ -238,16 +256,41 @@ img.footer{
   margin-bottom: 15px;
   align-self: center;
   padding-bottom: 15px;
+  font-family: 'Press Start 2P', cursive;
 }
 #MessageMeModal {
   position: fixed;
   bottom: 50px;
   right: 50px;
+  font-family: 'Press Start 2P', cursive;
+  color:black;
+}
+
+#MessageMeModal p{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color:black;
+  margin: 0px;
 }
 
 .Game{
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
+}
+
+.Game article p{
+  text-align: left;
+  justify-content: center;
+  align-self: center;
+}
+
+#GameModal{
+  position: relative;
+  width: 128px;
+  left: 120px;
+  top: -148px;
+  image-rendering: pixelated;
 }
 
 .description {

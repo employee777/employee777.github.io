@@ -5,13 +5,14 @@
 <meta charset="UTF-8">
 <meta name ="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcus Helms</title>
-    <link rel ="stylesheet" href="Css/index.css">
     <link rel ="stylesheet" href="Css/glitch.css">
     <link rel ="stylesheet" href="Css/Resize.css">
     <link rel ="stylesheet" href="Css/Nav.css">
     <link rel ="stylesheet" href="Css/Modal.css">
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">  
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link rel ="stylesheet" href="Css/index.css">
 </head>
 
 <body>
@@ -21,11 +22,10 @@
         <nav>
             <ul class="menuContainer">
                 <button class="Theme-BTN"></button>
-                    <ul class="fas fa-link" onclick ="toggleMenu()">
+                    <ul>
                         <li class="link"><a href="https://github.com/employee777/employee777" target="new">Github</a></li>
                         <li class="link"><a href="https://twitter.com/employee777" target="new">Twitter</a></li>
                         <li class="link"><a href="https://dev.to/employee777" target="new">Dev.to</a></li>
-                        <li class="link"><a href="https://repl.it/@Employee777" target="new">Repl.it</a></li>
                         <li class="link"><a href="https://codepen.io/employee777" target="new">Codepen</a></li>
                     </ul>
             </ul>     
@@ -47,10 +47,16 @@
                 <p>While in the navy, I worked with
                     computers, circuits, and heavy machinery as a Fire-Controlman (who doesn't like giant mech-like guns?). 
                     The things I like to do for fun are pretty simple, play games, 
-                    watch anime and kinda of engineer my way out of problems.       
-                    My hobbies include, but not limited to: illustrating, cooking, 
-                    DnD and electronics repair (laptops and   
-                    other PCBs), traveling, sleeping and good eats.       
+                    watch anime and kinda of engineer my way out of problems. <br><br>        
+                    My hobbies include, but not limited to: 
+                    <ul>
+                        <li>Illustrating</li>
+                        <li>Electronics</li>
+                        <li>traveling</li>
+                        <li>Gaming</li>
+                        <li>sleeping</li>
+                    </ul>
+                       
                 </p>
             </article>
             <img class="ShopIMG" src="Images/Workspace.jpg">
@@ -60,10 +66,10 @@
         <hr>
                 
         <section class="Game">
-            <article><h2>Space Man</h2>
+            <article><h1>Space Man</h1>
                 <p>An asteroids type shooter/bullet hell!</p>    
                 <span><img class="GameDemo" src="Images/game_demo.gif" alt="Game Demo"></img></span>
-                <img id="GameModal" src="Images/4bitPlayButton.png" onclick='modal(this)'></img>      
+                <img class="nes-pointer" id="GameModal" src="Images/4bitPlayButton.png" onclick='modal(this)'></img>      
             </article>
                         
             <article class="description"><p>While working on this project, i have developed a better understanding of javascripts asynchronous frameworks an limitations.
@@ -89,7 +95,9 @@
                 </article>  
             </section>
                 
-            <img id="MessageMeModal" src="Images/4bitPlayButton.png" onclick='modal(this)'></img>
+            <div id="MessageMeModal" class="nes-balloon from-right nes-pointer">
+                <p>Message me</p>
+              </div>
         </main>
                
         <footer>
