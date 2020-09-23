@@ -345,3 +345,7 @@ img.footer{
   width: 54px;
   image-rendering: pixelated;
 }
+
+#about {
+  padding: 0px;
+}
