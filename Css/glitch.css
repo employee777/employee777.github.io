@@ -8,7 +8,6 @@
   font-size: 100px;
   animation: glitch 5s 5s infinite;
 }
-
 .glitch::before, .glow::before {
   content: attr(data-text);
   position: absolute;
@@ -20,7 +19,6 @@
   top: 0;
   animation: noise-1 3.7s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
 }
-
 .glitch::after, .glow::after {
   content: attr(data-text);
   position: absolute;
@@ -32,7 +30,6 @@
   top: 0;
   animation: noise-2 2.2s linear infinite alternate-reverse, glitch 5s 5s infinite;
 }
-
 @keyframes glitch {
   1% {
     transform: rotateX(45deg) skewX(83deg);

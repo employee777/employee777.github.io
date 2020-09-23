@@ -1,72 +1,56 @@
 
 /* mobile menu */
 @media all and (max-width: 959px) {
-
   header{
     justify-content: space-around;
     background-color: var(--nav-color);
   }
-
   header h1{
-    
     margin-left: 15%;
     background-color: var(--nav-color);
   }
-
   .logo{
     padding-top: 45px;
     background-color: var(--nav-color);
     width: 120%;
     display: flex;
   }
-
   #navbar{
     flex-direction: column;
     transition: 1s;
   }
-
   nav{
     width: 120%;
     background-color: var(--nav-color);
     padding: 5px;
     padding-top: 20px;
-    
   }
-
   #navbar > nav > ul > ul > li{
     min-width:20px;
   }
-
   .aboutMe{
      flex-direction: column;
    }
-
    main{
     margin-top: 300px;
    }
-  
    main .Game{
       flex-direction: column;
       align-self: start;
     }
-  
     #GameModal{
     left: -245px;
     top: 0px;
-  }
-
+    }
     #description{
       flex-direction: column;
     }
-  
     .description{
       flex-direction: column;
     }
-
   footer{
       padding-top: 100px;
     }
-  
     #MessageModal {
       bottom: 100px;
     }
@@ -78,7 +62,6 @@
     .Theme-BTN{
       margin: 2px;
     }
-
     .ShopIMG{
       max-width:360px;
       min-width:180px;
@@ -87,23 +70,17 @@
       margin-bottom: 15px;
       align-self: center;
     }
-
     .description {
       margin-top: 15px;
     }
-  
   }
-
   /* mobile menu */
 @media all and (max-width: 507px) {
   #GameModal{
     left: 120px;
   top: -148px;
   }
-
   header h1{
     margin-left: 7%;
-  }
-
-  
+  } 
 }
