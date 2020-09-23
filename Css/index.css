@@ -248,7 +248,6 @@ footer {
   width: 100%;
   align-self: center;
   image-rendering: pixelated;
-  z-index: 1;
   text-align: center;
 }
 img.footer{
