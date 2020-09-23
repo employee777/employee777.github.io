@@ -270,6 +270,7 @@ img.footer{
   right: 50px;
   font-family: 'Press Start 2P', cursive;
   color:#222222;
+  z-index: 1;
 }
 #MessageModal p{
   font-family: 'Press Start 2P', cursive;
