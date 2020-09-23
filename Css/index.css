@@ -309,3 +309,7 @@ img.footer{
   align-self: start;
   text-align: left;
 }
+.coin{
+  margin: 5px;
+  image-rendering: pixelated;
+}
