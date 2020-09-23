@@ -50,7 +50,6 @@ body.dark-theme {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  
 }
 :root{
   -webkit-font-smoothing: antialiased;
@@ -311,5 +310,9 @@ img.footer{
 }
 .coin{
   margin: 5px;
+  image-rendering: pixelated;
+}
+.icon{
+  width: 54px;
   image-rendering: pixelated;
 }
