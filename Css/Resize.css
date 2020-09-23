@@ -33,6 +33,10 @@
     
   }
 
+  #navbar > nav > ul > ul > li{
+    min-width:20px;
+  }
+
   .aboutMe{
      flex-direction: column;
    }
