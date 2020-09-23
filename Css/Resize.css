@@ -9,7 +9,6 @@
 
   header h1{
     margin-left: 15%;
-    margin-right: 15%;
     background-color: var(--nav-color);
   }
 
@@ -33,6 +32,10 @@
 
   .aboutMe{
      flex-direction: column;
+   }
+
+   main{
+    margin-top: 300px;
    }
   
    main .Game{
@@ -74,13 +77,12 @@
       min-width:180px;
       min-height:180px;
       max-height:360px;
-      border-radius: 420px;
-      margin-left: 50px;
-      margin-right: 25px;
-      margin-top: -80px;
+      margin-bottom: 15px;
       align-self: center;
-      border-style: solid;
-      border-color: var(--brdr-color);
+    }
+
+    .description {
+      margin-top: 15px;
     }
   
   }
@@ -91,4 +93,10 @@
     left: 120px;
   top: -148px;
   }
+
+  header h1{
+    margin-left: 7%;
+  }
+
+  
 }
