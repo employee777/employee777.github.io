@@ -6,13 +6,14 @@
 <meta name ="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcus Helms</title>
     <link rel ="stylesheet" href="Css/glitch.css">
-    <link rel ="stylesheet" href="Css/Resize.css">
+    
     <link rel ="stylesheet" href="Css/Nav.css">
     <link rel ="stylesheet" href="Css/Modal.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">  
-    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link rel ="stylesheet" href="Css/index.css">
+    <link rel ="stylesheet" href="Css/Resize.css">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
             <ul class="menuContainer">
                 <button class="Theme-BTN"></button>
                     <ul>
-                        <li class="link"><a  class="nes-btn" href="https://github.com/employee777/employee777" target="new"><div class="nes-icon github is-medium"></div></a></li>
+                        <li class="link"><a  class="nes-btn" href="https://github.com/employee777/employee777" target="new"><img src="Images/Github.png" class="icon"></div></a></li>
                         <li class="link"><a  class="nes-btn" href="https://twitter.com/employee777" target="new"><img src="Images/Twitter.png" class="icon"></a></li>
                         <li class="link"><a  class="nes-btn" href="https://dev.to/employee777" target="new"><img src="Images/Dev.png" class="icon"></a></li>
                         <li class="link"><a  class="nes-btn" href="https://codepen.io/employee777" target="new"><img src="Images/Codepen.png" class="icon"></a></li>
@@ -64,8 +65,10 @@
         <section class="Game">
             <article><h1>Space Man</h1>
                 <p>An asteroids type shooter/bullet hell!</p>    
-                <span><img class="GameDemo" src="Images/game_demo.gif" alt="Game Demo"></img></span>
-                <img class="nes-pointer" id="GameModal" src="Images/4bitPlayButton.png" onclick='modal(this)'></img>      
+                <span>
+                    <img class="GameDemo" src="Images/game_demo.gif"><img class="nes-pointer" id="GameModal" src="Images/4bitPlayButton.png"></img> </img>
+                    
+                </span>      
             </article>
                         
             <article class="description"><p>While working on this project, i have developed a better understanding of javascripts asynchronous frameworks an limitations.
@@ -85,7 +88,7 @@
                 </article>  
             </section>
                 
-            <div id="MessageMeModal" class="nes-balloon from-right nes-pointer">
+            <div id="MessageModal" class="nes-balloon from-right nes-pointer">
                 <p>MESSAGE ME!</p>
               </div>
         </main>
@@ -106,36 +109,35 @@
            
         <div id="Game" class="modal">
             <div class="modal-content" >
-                <span class="close">&times;</span>
+                <span class="close" onclick="MessageClose()">&times;</span>
                 <iframe  frameborder="0" src="https://itch.io/embed-upload/2697732?color=333333" allowfullscreen="" width="980" height="688"><a href="https://employee777.itch.io/zeromarz">Play ProtoZero on itch.io</a></iframe>
             </div>
         </div>
            
         <!-- The Message Modal -->
             <div id="MessageMe" class="modal">
-            <div class="modal-content" >
-               
-                <span class="close">&times;</span>
+            
+                <div class="modal-content" >
+                <span class="close" onclick="MessageClose()">&times;</span>
                 <h3>Message Me</h3>
                    
                 <form action="https://formspree.io/mgenywgo" method="POST"> 
                        
                         <label for="from" class="input-w">
                         <span class="label"><h4>Email:</h4></span>
-                        <input type="text" name="_replyto" id="from" />
+                        <input type="text" class="nes-input" name="_replyto" id="from" />
                         </label>
                        
                         <label for="message" class="input-w">
                         <span class="label"><h4>Message:</h4>
-                        <textarea type="text" name="message" id="message"></textarea>
+                        <textarea type="text" class="nes-textarea" name="message" id="message"></textarea>
                         </label>
                        
-                        <button type="submit" id="submit">Send</button>
+                        <button type="submit button" class="nes-btn is-primary" id="submit">Send</button>
                     
                     </form>
                 </div>
             </div>
-
 
     </body>
 <script src="JavaScript/index.js"></script>

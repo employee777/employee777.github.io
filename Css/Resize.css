@@ -2,13 +2,74 @@
 /* mobile menu */
 @media all and (max-width: 959px) {
 
-   
-    
   
-  
-  
-
-
-
-
+  #navbar{
+    flex-direction: column;
   }
+  nav{
+    width: 120%;
+    background-color: var(--nav-color);
+    margin: 0%;
+    padding: 0px;
+  }
+  .aboutMe{
+     flex-direction: column;
+   }
+  
+   main .Game{
+      flex-direction: column;
+      align-self: start;
+    }
+  
+    #GameModal{
+    left: -245px;
+    top: 0px;
+  }
+
+    #description{
+      flex-direction: column;
+    }
+  
+    .description{
+      flex-direction: column;
+    }
+
+  footer{
+      padding-top: 100px;
+    }
+  
+    #MessageModal {
+      bottom: 100px;
+    }
+    .icon{
+      min-width: 16px;
+      margin:2%;
+      image-rendering: pixelated;
+    }
+    .Theme-BTN{
+      margin: 2px;
+    }
+
+    .ShopIMG{
+      max-width:360px;
+      min-width:180px;
+      min-height:180px;
+      max-height:360px;
+      border-radius: 420px;
+      margin-left: 50px;
+      margin-right: 25px;
+      margin-top: -80px;
+      align-self: center;
+      border-style: solid;
+      border-color: var(--brdr-color);
+    }
+  
+  }
+
+  /* mobile menu */
+@media all and (max-width: 507px) {
+  #GameModal{
+    left: 120px;
+  top: -148px;
+  }
+}

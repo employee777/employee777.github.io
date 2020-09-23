@@ -13,15 +13,32 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  color: black;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  justify-content: center;
+  flex-flow: column;
+  background-color: #fefefe;/* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  min-width: 20%;
+  max-width: 100%;
+  max-height: fit-content; /* Could be more or less, depending on screen size */
+  color: black;
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+.modal-content form{
+  color: black;
+  flex-flow: column;
+  display: flex;
+  background-color: #fefefe;
+  min-width: 320px;
 }
 
 /* The Close Button */
