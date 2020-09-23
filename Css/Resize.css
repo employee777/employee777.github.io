@@ -2,16 +2,35 @@
 /* mobile menu */
 @media all and (max-width: 959px) {
 
-  
+  header{
+    justify-content: space-around;
+    background-color: var(--nav-color);
+  }
+
+  header h1{
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: var(--nav-color);
+  }
+
+  .logo{
+    background-color: var(--nav-color);
+    width: 120%;
+    display: flex;
+  }
+
   #navbar{
     flex-direction: column;
+    transition: 1s;
   }
+
   nav{
     width: 120%;
     background-color: var(--nav-color);
-    margin: 0%;
-    padding: 0px;
+    padding: 5px;
+    
   }
+
   .aboutMe{
      flex-direction: column;
    }
