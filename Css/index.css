@@ -55,8 +55,9 @@ body.dark-theme {
   margin: 0;
 }
 :root{
-  -webkit-font-smoothing: antialiased;
   font-family: 'Input Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+	-o-transform: scale(1);
 }
 .background {
   background:var(--bkg-color);
