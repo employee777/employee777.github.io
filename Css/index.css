@@ -270,7 +270,7 @@ img.footer{
 }
 #MessageMeModal {
   position: fixed;
-  bottom: 50px;
+  bottom: 30px;
   right: 50px;
   font-family: 'Press Start 2P', cursive;
   color:black;
