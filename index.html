@@ -13,10 +13,11 @@
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link rel ="stylesheet" href="Css/index.css">
     <link rel ="stylesheet" href="Css/Resize.css">
+    
 </head>
 
 <body>
-    <canvas id ="background" class="background"></canvas>
+    <div name="background effects" id ="background" class="background"></div>
     <header id="navbar">
         <span class="logo"><h1 class="glitch" data-text="MARK">MARK</h1></span>
         <nav>
@@ -36,9 +37,17 @@
         <section class="aboutMe">
                              
             <section id="description" >  
-                <article>   <h1>Hello!</h1>
-                <h4><img class="SelfIMG" src="Images/PixelSelf.png"><br><br><br>
-                    I'm a USN Veteran, <br>Engineer, <br>and I do nerd things. </h4>     
+                <article> 
+                    <div class="businessCard">
+                    <img class="SelfIMG" src="Images/PixelSelf.png"> 
+                    <div class="greeting">
+                    <div><h1>Hello!</h1></div>
+                    <br>
+                    <div><h4>
+                    I'm a USN Veteran, <br>Engineer, <br>and I do nerd things. 
+                    </h4></div>   
+                    </div>  
+                    </div>
                    
                 <p>While in the navy, I worked with
                     computers, circuits, and heavy machinery as a Fire-Controlman.</p> <h5 style="margin:-15px; margin-left:50px;">( who doesn't like giant mech-like stuff? )</h5> 
@@ -109,18 +118,7 @@
         <div id="Game" class="modal">
             <div class="modal-content" >
                 <span class="close" onclick="MessageClose()">&times;</span>
-                <!-- Copy and Paste Me -->
-               <!--    
-                <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-                    <iframe
-                        src="https://glitch.com/embed/#!/embed/valiant-psychedelic-cold?path=README.md&previewSize=100"
-                        title="valiant-psychedelic-cold on Glitch"
-                        allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-                        style="height: 100%; width: 100%; border: 0;">
-                    </iframe>
-                    </div> -->
-                <!-- -->
-                <iframe src="https://itch.io/embed-upload/2765579?color=333333" allowfullscreen="" width="980" height="688" frameborder="0"><a href="https://marcushelms.itch.io/protozero">Play ProtoZero on itch.io</a></iframe>
+                <iframe src="https://markhelms.tech" allowfullscreen="" width="980" height="688" frameborder="0"><a href="https://marcushelms.itch.io/protozero">Play ProtoZero on itch.io</a></iframe>
             </div>
         </div>
            
@@ -131,11 +129,16 @@
                 <span class="close" onclick="MessageClose()">&times;</span>
                 <h3>Message Me</h3>
                    
-                <form action="https://formspree.io/mgenywgo" method="POST"> 
+                <form  class="kwes-form" action="https://kwes.io/api/foreign/forms/voIj8VfcWUMxvvnAvLNn" method="POST"> 
                        
-                        <label for="from" class="input-w">
-                        <span class="label"><h4>Email:</h4></span>
-                        <input type="text" class="nes-input" name="_replyto" id="from" />
+                        <label for="name" class="input-w">
+                        <span class="label"><h4>Your Name:</h4></span>
+                        <input type="text" class="nes-input" name="name" id="from" rules="required|max:255">
+                        </label>
+
+                        <label for="email" class="input-w">
+                        <span class="label"><h4>Your Email:</h4></span>
+                        <input type="text" class="nes-input" email="email" id="from" rules="required|max:255">
                         </label>
                        
                         <label for="message" class="input-w">
@@ -143,12 +146,14 @@
                         <textarea type="text" class="nes-textarea" name="message" id="message"></textarea>
                         </label>
                        
-                        <button type="submit button" class="nes-btn is-primary" id="submit">Send</button>
+                        <button type="submit" type="submit button"  class="nes-btn is-primary" id="submit">Send</button>
                     
                     </form>
                 </div>
             </div>
-
+            <script src="https://kwes.io/v2/kwes-script.js" charset="utf-8"></script> 
+            <script src="https://cdn.jsdelivr.net/npm/melonjs@latest/dist/melonjs.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/melonjs@latest/plugins/debug/debugPanel.js"></script>
     </body>
 <script src="JavaScript/index.js"></script>
 <script src="JavaScript/Modal.js"></script>

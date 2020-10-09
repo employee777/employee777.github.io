@@ -55,6 +55,7 @@ body.dark-theme {
   margin: 0;
 }
 :root{
+  font-weight: 400;
   font-family: 'Input Mono', monospace;
   -webkit-font-smoothing: antialiased;
 	-o-transform: scale(1);
@@ -69,6 +70,7 @@ body.dark-theme {
   display: block;
   z-index: -1;
   image-rendering:pixelated;
+  image-rendering: -moz-crisp-edges;
 }
 body {
   margin: auto;
@@ -166,7 +168,7 @@ h1 {
 }
 .ShopIMG{
   max-width:360px;
-  max-height:360px;
+  min-height:360px;
   border-radius: 420px;
   margin-left: 50px;
   margin-right: 25px;
@@ -183,8 +185,19 @@ h1 {
   border-color: var(--brdr-color);
   image-rendering:pixelated;
   margin-right:25px;
+  image-rendering: -moz-crisp-edges;
   
 }
+
+.businessCard{
+  display: flex;
+}
+
+.greeting{
+  display: flex;
+  flex-direction: column;
+}
+
 .GameDemo{
   margin: 25px;
   min-width:320px;
@@ -193,6 +206,7 @@ h1 {
   border-radius: 15px;
   border-style: solid;
   border-color: var(--brdr-color);
+  image-rendering: -moz-crisp-edges;
 }
 p {
   font-size: 20px;
@@ -225,15 +239,6 @@ main {
   display: flex;
   flex-direction: column;
 }
-.aboutMe article h1{
-  margin-bottom:-45px;
-  margin-left:188px;
-  text-align: left;
-}
-.aboutMe article h4{
-  display: flex;
-  align-items: top;
-}
 .aboutMe article li{
   display: flex;
   margin-left: 50px;
@@ -250,6 +255,7 @@ footer {
   align-self: center;
   image-rendering: pixelated;
   text-align: center;
+  image-rendering: -moz-crisp-edges;
 }
 img.footer{
   bottom: 0px;
@@ -265,6 +271,7 @@ img.footer{
   font-family: 'Press Start 2P', cursive;
 }
 #MessageModal {
+  font-weight: 400;
   position: fixed;
   bottom: 75px;
   right: 50px;
@@ -273,24 +280,28 @@ img.footer{
   z-index: 1;
 }
 #MessageModal p{
+  font-weight: 400;
   font-family: 'Press Start 2P', cursive;
   font-size: 14px;
   color:black;
   margin: 0px;
 }
 #MessageMe h3{
+  font-weight: 400;
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
   color:black;
   margin-left: 0px;
 } 
 #MessageMe h4{
+  font-weight: 400;
   font-family: 'Press Start 2P', cursive;
   font-size: 12px;
   color:black;
   margin-left: 0px;
 }
 #MessageMe button{
+  font-weight: 400;
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
   color:#eeeeee;
@@ -315,6 +326,7 @@ img.footer{
   left: 120px;
   top: -148px;
   image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
 }
 .description {
   margin-top: 145px;
@@ -324,10 +336,12 @@ img.footer{
 .coin{
   margin: 5px;
   image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
 }
 .icon{
   width: 54px;
   image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
 }
 #about {
   padding: 0px;
